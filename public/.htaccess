@@ -1,0 +1,43 @@
+# ---------- Custom error pages ----------
+ErrorDocument 403 /403.html
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+ErrorDocument 503 /503.html
+
+# ---------- Security headers ----------
+<IfModule mod_headers.c>
+  # MIME-sniffing protection
+  Header always set X-Content-Type-Options "nosniff"
+
+  # Clickjacking protection (redundant with CSP frame-ancestors below, kept for older browsers)
+  Header always set X-Frame-Options "SAMEORIGIN"
+
+  # Don't leak the full URL (query strings, paths) to third-party origins on outbound links
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Disable browser features this static site never uses
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+
+  # Isolate this site's browsing context from cross-origin popups/openers
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+
+  # Legacy header; explicitly disabled per current guidance (CSP is the real defense against XSS)
+  Header always set X-XSS-Protection "0"
+
+  # HSTS — only takes effect once served over HTTPS with a real certificate;
+  # harmless no-op over plain HTTP today, pre-staged for when the site moves to a TLS-terminated domain.
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+  # Content-Security-Policy: same-origin by default, plus the exact third-party
+  # origins this site actually loads (Google Fonts, jsDelivr for Three.js/GSAP).
+  # 'unsafe-inline' is required for script-src/style-src because the site has no
+  # build step to generate per-request nonces for its inline theme-detection
+  # script and inline style attributes — this still blocks any externally
+  # injected <script src> or stylesheet from a non-allow-listed origin.
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+</IfModule>
+
+# ---------- Block access to dotfiles (.htaccess, .git, etc.) ----------
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>

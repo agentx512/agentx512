@@ -1,0 +1,775 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Projects — Abdullah Hussein</title>
+<meta name="description" content="Featured web development projects — a laboratory operations system, an educational center management ERP, marketing agency and e-commerce sites, and a 48-hour NASA Space Apps hackathon prototype." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Projects — Abdullah Hussein" />
+<meta property="og:description" content="Featured web development projects — a laboratory operations system, an educational center management ERP, marketing agency and e-commerce sites, and a 48-hour NASA Space Apps hackathon prototype." />
+<meta property="og:image" content="https://agentx512.local/assets/abdullah-photo.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://agentx512.local/projects.html" />
+<link rel="manifest" href="manifest.json" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<meta name="theme-color" content="#14201a" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#f6faf8" media="(prefers-color-scheme: light)" />
+<script>
+(function () {
+  try {
+    var saved = localStorage.getItem('theme');
+    var theme = saved === 'light' || saved === 'dark'
+      ? saved
+      : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    document.documentElement.setAttribute('data-theme', theme);
+  } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+})();
+</script>
+<link rel="stylesheet" href="/css/fonts.css" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- Preloader -->
+  <div class="preloader" data-boot-target="projects">
+    <canvas class="preloader-rain" aria-hidden="true"></canvas>
+    <div class="preloader-mark">
+      <div class="term-window">
+        <div class="term-titlebar">
+          <span class="term-dot d1"></span><span class="term-dot d2"></span><span class="term-dot d3"></span>
+          <span class="term-titletext">agentx512@boot:~</span>
+        </div>
+        <div class="term-body">
+          <img src="assets/favicon.svg" class="preloader-logo" alt="agentx512">
+          <div class="term-log" id="term-log"></div>
+          <div class="term-progress-row">
+            <span class="term-bracket">[</span>
+            <div class="preloader-bar"><span></span></div>
+            <span class="term-bracket">]</span>
+            <span class="preloader-percent">0%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nav -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html#home" class="nav-logo"><img src="assets/favicon.svg" class="nav-logo-mark" alt="agentx512"><span class="nav-status" aria-hidden="true"></span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="index.html#education">Education</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="index.html#bughunting">Bug Hunting</a></li>
+        <li><a href="projects.html" class="is-active">Projects</a></li>
+        <li><a href="services.html">Services</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4.5"></circle>
+            <path d="M12 2.5v2.5M12 19v2.5M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2.5 12H5M19 12h2.5M4.2 19.8L6 18M18 6l1.8-1.8"></path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z"></path>
+          </svg>
+        </button>
+        <a href="index.html#contact" class="nav-cta">Contact</a>
+        <button class="nav-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-drawer">
+    <a href="index.html#home">Home</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="experience.html">Experience</a>
+    <a href="index.html#education">Education</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="index.html#bughunting">Bug Hunting</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+
+  <main>
+
+    <!-- Page header -->
+    <header class="page-header">
+      <div class="container">
+        <a href="index.html" class="page-back reveal">
+          <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="11 18 5 12 11 6"/></svg>
+          Back to Home
+        </a>
+        <h1 class="reveal"><span class="gradient-text">Projects</span></h1>
+        <p class="reveal">Full-stack builds, from a company-wide laboratory operations system to client-facing
+          marketing and e-commerce sites. Click any screenshot to open a full preview.</p>
+        <div class="page-chips reveal">
+          <a href="#qtl-website">QTL Website</a>
+          <a href="#qtl-lims">QTL LIMS</a>
+          <a href="#grey-agency">Grey Agency</a>
+          <a href="#arabkb">ArabKB</a>
+          <a href="#center-erp">Center ERP</a>
+          <a href="#nasa">NASA Space Apps</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Featured projects -->
+    <section>
+      <div class="container">
+        <div class="project-cases-grid">
+
+        <!-- QTL Corporate Website -->
+        <article class="project-case glass reveal" id="qtl-website">
+          <div class="project-case-media project-media-frame">
+            <div class="browser-chrome">
+              <span class="chrome-dot d1"></span><span class="chrome-dot d2"></span><span class="chrome-dot d3"></span>
+              <span class="chrome-url">qtlaboratory.com</span>
+            </div>
+            <div class="project-media project-gallery" data-gallery data-plb-group="qtl-website" data-plb-title="QTL — Corporate Website">
+              <img src="assets/projects/qtlweb-01-home.webp" alt="QTL corporate website homepage hero" class="gallery-img is-active" loading="lazy">
+              <img src="assets/projects/qtlweb-02-about.webp" alt="QTL about page with company stats and accreditation" class="gallery-img" loading="lazy">
+              <img src="assets/projects/qtlweb-03-services.webp" alt="QTL services page listing engineering services" class="gallery-img" loading="lazy">
+              <img src="assets/projects/qtlweb-04-tests.webp" alt="QTL laboratory tests page with filterable categories" class="gallery-img" loading="lazy">
+              <img src="assets/projects/qtlweb-05-projects.webp" alt="QTL projects page with real client project table" class="gallery-img" loading="lazy">
+              <span class="project-zoom-hint" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+              </span>
+              <div class="gallery-dots">
+                <button type="button" class="gallery-dot is-active" data-goto="0" aria-label="Home screenshot"></button>
+                <button type="button" class="gallery-dot" data-goto="1" aria-label="About screenshot"></button>
+                <button type="button" class="gallery-dot" data-goto="2" aria-label="Services screenshot"></button>
+                <button type="button" class="gallery-dot" data-goto="3" aria-label="Tests screenshot"></button>
+                <button type="button" class="gallery-dot" data-goto="4" aria-label="Projects screenshot"></button>
+              </div>
+            </div>
+          </div>
+          <div class="project-case-body">
+            <div class="project-case-head">
+              <span class="project-index">01</span>
+              <div>
+                <p class="eyebrow">Live Site · Geotechnical &amp; Testing</p>
+                <h2>Quality Tests Laboratory — Corporate Website</h2>
+              </div>
+            </div>
+            <p>Built the public-facing website for QTL's Saudi operations — a bilingual corporate site covering
+              services, standards-referenced lab tests, accreditation, and real client project work across the
+              Kingdom.</p>
+            <div class="project-specs">
+              <div class="project-spec-row">
+                <span class="project-spec-num">01</span>
+                <div>
+                  <h4>Geotechnical Field Testing</h4>
+                  <p>On-site drilling, SPT, boreholes, and monitoring wells.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">02</span>
+                <div>
+                  <h4>53 Standardised Lab Tests</h4>
+                  <p>Filterable by category — soil, concrete, asphalt, aggregates, water &amp; chemical.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">03</span>
+                <div>
+                  <h4>Seven Engineering Services</h4>
+                  <p>From subsurface investigation to shoring, in one catalog.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">04</span>
+                <div>
+                  <h4>ISO/IEC 17025 Accreditation</h4>
+                  <p>Credentials and standards bodies (ASTM, BS, ACI, MOT) on display.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">05</span>
+                <div>
+                  <h4>Real Client Project Portfolio</h4>
+                  <p>SWCC, the Royal Commission, BHA Group, Rua Al Madinah Holding.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">06</span>
+                <div>
+                  <h4>Bilingual EN/AR</h4>
+                  <p>Full Arabic/English language toggle across every page.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">07</span>
+                <div>
+                  <h4>Request-a-Test &amp; Portfolio CTA</h4>
+                  <p>Lead-capture flow plus a downloadable company portfolio deck.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">08</span>
+                <div>
+                  <h4>Live Capacity Indicator</h4>
+                  <p>Real-time "field crews active" status badge on the homepage.</p>
+                </div>
+              </div>
+            </div>
+            <div class="project-tags"><span>Web Design</span><span>Front-End</span><span>Bilingual (EN/AR)</span><span>Corporate</span></div>
+            <div class="project-links">
+              <a class="btn btn-primary" href="https://qtlaboratory.com/" target="_blank" rel="noopener">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7"/><path d="M10 14L21 3"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>
+                Visit qtlaboratory.com
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Quality Tests Laboratory LIMS -->
+        <article class="project-case glass reveal" id="qtl-lims">
+          <div class="project-case-media project-media-frame">
+            <div class="browser-chrome">
+              <span class="chrome-dot d1"></span><span class="chrome-dot d2"></span><span class="chrome-dot d3"></span>
+            </div>
+            <div class="project-media is-logo-frame">
+              <img src="assets/projects/qtl-logo.webp" alt="Quality Tests Laboratory logo" loading="lazy">
+              <span class="project-tag-float">Featured</span>
+            </div>
+          </div>
+          <div class="project-case-body">
+            <div class="project-case-head">
+              <span class="project-index">02</span>
+              <div>
+                <p class="eyebrow">Featured · Internal System</p>
+                <h2>Quality Tests Laboratory — LIMS</h2>
+              </div>
+            </div>
+            <p>A custom-built Laboratory Information Management System covering the company's core operations, built
+              and shipped as the sole engineer — database schema, PHP/MySQL backend, and front-end, plus an ongoing
+              maintenance and security-hardening cycle to keep it safe in production.</p>
+            <div class="project-specs">
+              <div class="project-spec-row">
+                <span class="project-spec-num">01</span>
+                <div>
+                  <h4>Sample Tracking</h4>
+                  <p>Barcode-based collection &amp; receipt logging from field to lab.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">02</span>
+                <div>
+                  <h4>Multi-Stage QC Workflow</h4>
+                  <p>Data-entry → QC → final-approval pipeline per test result.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">03</span>
+                <div>
+                  <h4>RFQ &amp; Job Orders</h4>
+                  <p>Quote requests through job-order assignment and tracking.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">04</span>
+                <div>
+                  <h4>Digital Lab Certificates</h4>
+                  <p>QR-verified PDF report generation and download.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">05</span>
+                <div>
+                  <h4>Role-Based Access</h4>
+                  <p>Granular per-module permissions and an admin control panel.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">06</span>
+                <div>
+                  <h4>Asset &amp; ISO Calibration</h4>
+                  <p>Fleet/equipment maintenance and calibration-due tracking.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">07</span>
+                <div>
+                  <h4>Audit Trail &amp; Hardening</h4>
+                  <p>Action logging plus periodic internal security audits (CSRF, authorization, input validation).</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">08</span>
+                <div>
+                  <h4>Client &amp; Project Management</h4>
+                  <p>Central records tying clients, projects, and job orders together.</p>
+                </div>
+              </div>
+            </div>
+            <div class="project-tags"><span>PHP</span><span>MySQL</span><span>Full-Stack</span><span>LIMS</span></div>
+            <p class="project-note">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+              Shown here by company logo only — the system holds confidential operational and client data, so no
+              interface screenshots are published.
+            </p>
+          </div>
+        </article>
+
+        <!-- Grey Agency -->
+        <article class="project-case glass reveal" id="grey-agency">
+          <div class="project-case-media project-media-frame">
+            <div class="browser-chrome">
+              <span class="chrome-dot d1"></span><span class="chrome-dot d2"></span><span class="chrome-dot d3"></span>
+              <span class="chrome-url">greymarketingsolutions.com</span>
+            </div>
+            <div class="project-media project-gallery" data-gallery data-plb-group="grey" data-plb-title="Grey Agency — Marketing &amp; Media Website">
+              <img src="assets/projects/grey-01-hero.webp" alt="Grey Agency homepage hero" class="gallery-img is-active" loading="lazy">
+              <img src="assets/projects/grey-02-showreel.webp" alt="Grey Agency recent projects showreel section" class="gallery-img" loading="lazy">
+              <img src="assets/projects/grey-03-about.webp" alt="Grey Agency introduction / about section" class="gallery-img" loading="lazy">
+              <img src="assets/projects/grey-04-services.webp" alt="Grey Agency ATL and BTL services section" class="gallery-img" loading="lazy">
+              <img src="assets/projects/grey-05-designs.webp" alt="Grey Agency designs portfolio page" class="gallery-img" loading="lazy">
+              <span class="project-zoom-hint" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+              </span>
+              <div class="gallery-dots">
+                <button type="button" class="gallery-dot is-active" data-goto="0" aria-label="Hero screenshot"></button>
+                <button type="button" class="gallery-dot" data-goto="1" aria-label="Showreel screenshot"></button>
+                <button type="button" class="gallery-dot" data-goto="2" aria-label="About section screenshot"></button>
+                <button type="button" class="gallery-dot" data-goto="3" aria-label="Services section screenshot"></button>
+                <button type="button" class="gallery-dot" data-goto="4" aria-label="Designs page screenshot"></button>
+              </div>
+            </div>
+          </div>
+          <div class="project-case-body">
+            <div class="project-case-head">
+              <span class="project-index">03</span>
+              <div>
+                <p class="eyebrow">Live Site · Marketing Agency</p>
+                <h2>Grey Agency — Marketing &amp; Media Website</h2>
+              </div>
+            </div>
+            <p>Designed and built the marketing website for Grey Agency, a branding and media production agency —
+              a dark, cinematic multi-page site covering their ATL/BTL services, showreel, partners, and a 3000+
+              piece design portfolio.</p>
+            <div class="project-specs">
+              <div class="project-spec-row">
+                <span class="project-spec-num">01</span>
+                <div>
+                  <h4>Cinematic Hero Section</h4>
+                  <p>Animated glowing portal graphic with brand-forward motion on load.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">02</span>
+                <div>
+                  <h4>Video Showreel</h4>
+                  <p>Auto-playing "Recent Projects" reel section with playback controls.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">03</span>
+                <div>
+                  <h4>ATL/BTL Service Pages</h4>
+                  <p>Structured breakdown of above- and below-the-line service offerings.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">04</span>
+                <div>
+                  <h4>Design Portfolio Gallery</h4>
+                  <p>Dedicated page showcasing 3000+ crafted designs across 30+ brands.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">05</span>
+                <div>
+                  <h4>Company Profile Page</h4>
+                  <p>Scrolling "About Us" case-study page with mission, vision, and stats.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">06</span>
+                <div>
+                  <h4>Partners Showcase</h4>
+                  <p>Trusted-brand and partner logo section on the homepage.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">07</span>
+                <div>
+                  <h4>Bilingual EN/AR</h4>
+                  <p>Full Arabic/English language toggle across every page.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">08</span>
+                <div>
+                  <h4>WhatsApp &amp; Contact Widget</h4>
+                  <p>Floating chat widget plus a dedicated contact section.</p>
+                </div>
+              </div>
+            </div>
+            <div class="project-tags"><span>Web Design</span><span>Front-End</span><span>Responsive</span><span>Bilingual (EN/AR)</span></div>
+            <div class="project-links">
+              <a class="btn btn-primary" href="https://greymarketingsolutions.com/" target="_blank" rel="noopener">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7"/><path d="M10 14L21 3"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>
+                Visit greymarketingsolutions.com
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ArabKB -->
+        <article class="project-case glass reveal" id="arabkb">
+          <div class="project-case-media project-media-frame">
+            <div class="browser-chrome">
+              <span class="chrome-dot d1"></span><span class="chrome-dot d2"></span><span class="chrome-dot d3"></span>
+              <span class="chrome-url">arabkb.com</span>
+            </div>
+            <div class="project-media project-gallery" data-gallery data-plb-group="arabkb" data-plb-title="ArabKB — K-Beauty E-Commerce Store">
+              <img src="assets/projects/arabkb-01-hero.webp" alt="ArabKB store homepage hero" class="gallery-img is-active" loading="lazy">
+              <img src="assets/projects/arabkb-02-categories.webp" alt="ArabKB shop-by-category section" class="gallery-img" loading="lazy">
+              <img src="assets/projects/arabkb-03-featured.webp" alt="ArabKB featured products section" class="gallery-img" loading="lazy">
+              <img src="assets/projects/arabkb-04-shop.webp" alt="ArabKB shop page with filters and product grid" class="gallery-img" loading="lazy">
+              <img src="assets/projects/arabkb-05-product.webp" alt="ArabKB product detail page" class="gallery-img" loading="lazy">
+              <span class="project-zoom-hint" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+              </span>
+              <div class="gallery-dots">
+                <button type="button" class="gallery-dot is-active" data-goto="0" aria-label="Hero screenshot"></button>
+                <button type="button" class="gallery-dot" data-goto="1" aria-label="Categories screenshot"></button>
+                <button type="button" class="gallery-dot" data-goto="2" aria-label="Featured products screenshot"></button>
+                <button type="button" class="gallery-dot" data-goto="3" aria-label="Shop page screenshot"></button>
+                <button type="button" class="gallery-dot" data-goto="4" aria-label="Product page screenshot"></button>
+              </div>
+            </div>
+          </div>
+          <div class="project-case-body">
+            <div class="project-case-head">
+              <span class="project-index">04</span>
+              <div>
+                <p class="eyebrow">Live Site · E-Commerce</p>
+                <h2>ArabKB — K-Beauty E-Commerce Store</h2>
+              </div>
+            </div>
+            <p>Built the storefront for ArabKB, an online shop for Korean skincare, makeup, and beauty products —
+              category browsing, filterable shop page, product detail pages, cart, and checkout for the Egyptian
+              market.</p>
+            <div class="project-specs">
+              <div class="project-spec-row">
+                <span class="project-spec-num">01</span>
+                <div>
+                  <h4>Filterable Shop Page</h4>
+                  <p>40+ products, filterable by category, price, and skin concern.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">02</span>
+                <div>
+                  <h4>Product Detail Pages</h4>
+                  <p>Image gallery, pricing, stock status, Add to Cart &amp; Buy Now.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">03</span>
+                <div>
+                  <h4>Shop-by-Category Grid</h4>
+                  <p>Visual category tiles — Acne, Anti-Aging, Body, Brands, and more.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">04</span>
+                <div>
+                  <h4>Cart &amp; Checkout</h4>
+                  <p>Shopping cart with an Egypt-focused checkout flow.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">05</span>
+                <div>
+                  <h4>Multi-Currency (EGP)</h4>
+                  <p>Localized pricing with an EGP currency selector.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">06</span>
+                <div>
+                  <h4>Account &amp; Order Tracking</h4>
+                  <p>Login/register flow with order history and tracking.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">07</span>
+                <div>
+                  <h4>WhatsApp Support Widget</h4>
+                  <p>Floating chat button for direct customer support.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">08</span>
+                <div>
+                  <h4>Mobile-First Storefront</h4>
+                  <p>Fully responsive layout tuned for mobile shopping.</p>
+                </div>
+              </div>
+            </div>
+            <div class="project-tags"><span>E-Commerce</span><span>Front-End</span><span>Responsive</span><span>Product Catalog</span></div>
+            <div class="project-links">
+              <a class="btn btn-primary" href="https://arabkb.com/" target="_blank" rel="noopener">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7"/><path d="M10 14L21 3"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>
+                Visit arabkb.com
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Center ERP -->
+        <article class="project-case glass reveal" id="center-erp">
+          <div class="project-case-media project-media-frame">
+            <div class="browser-chrome">
+              <span class="chrome-dot d1"></span><span class="chrome-dot d2"></span><span class="chrome-dot d3"></span>
+            </div>
+            <div class="project-media project-gallery" data-gallery data-plb-group="center-erp" data-plb-title="Center ERP — Educational Center Management System">
+              <img src="assets/projects/center-01-dashboard.webp" alt="Center ERP dashboard overview with stats and revenue chart" class="gallery-img is-active" loading="lazy">
+              <img src="assets/projects/center-02-students.webp" alt="Center ERP students list with search and filters" class="gallery-img" loading="lazy">
+              <img src="assets/projects/center-03-schedule.webp" alt="Center ERP weekly class schedule" class="gallery-img" loading="lazy">
+              <img src="assets/projects/center-04-finance.webp" alt="Center ERP finance overview with invoices and payments" class="gallery-img" loading="lazy">
+              <img src="assets/projects/center-05-exams.webp" alt="Center ERP exams and results grid" class="gallery-img" loading="lazy">
+              <span class="project-zoom-hint" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+              </span>
+              <div class="gallery-dots">
+                <button type="button" class="gallery-dot is-active" data-goto="0" aria-label="Dashboard screenshot"></button>
+                <button type="button" class="gallery-dot" data-goto="1" aria-label="Students screenshot"></button>
+                <button type="button" class="gallery-dot" data-goto="2" aria-label="Schedule screenshot"></button>
+                <button type="button" class="gallery-dot" data-goto="3" aria-label="Finance screenshot"></button>
+                <button type="button" class="gallery-dot" data-goto="4" aria-label="Exams screenshot"></button>
+              </div>
+            </div>
+          </div>
+          <div class="project-case-body">
+            <div class="project-case-head">
+              <span class="project-index">05</span>
+              <div>
+                <p class="eyebrow">Local Build · Center Management</p>
+                <h2>Center ERP — Educational Center Management System</h2>
+              </div>
+            </div>
+            <p>A full management ERP for a private tutoring center — students, class groups, scheduling, attendance,
+              exams, and finances in one dashboard, built solo end-to-end and still running locally ahead of
+              deployment.</p>
+            <div class="project-specs">
+              <div class="project-spec-row">
+                <span class="project-spec-num">01</span>
+                <div>
+                  <h4>Student Records</h4>
+                  <p>Searchable roster with codes, groups, contact info, and status.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">02</span>
+                <div>
+                  <h4>Groups &amp; Classes</h4>
+                  <p>Grade-level groups with room assignment, capacity, and fees.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">03</span>
+                <div>
+                  <h4>Schedule &amp; Sessions</h4>
+                  <p>Weekly timetable with one-click session generation per group.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">04</span>
+                <div>
+                  <h4>QR Attendance</h4>
+                  <p>QR-based check-in plus manual marking and session history.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">05</span>
+                <div>
+                  <h4>Exams &amp; Question Bank</h4>
+                  <p>Exam creation, results, grade averages, and a leaderboard.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">06</span>
+                <div>
+                  <h4>Finance &amp; Invoicing</h4>
+                  <p>Invoices, payments, expenses, and outstanding-dues tracking.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">07</span>
+                <div>
+                  <h4>Messaging &amp; Notifications</h4>
+                  <p>In-app messages and a live notification center.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">08</span>
+                <div>
+                  <h4>Role-Based Users &amp; Reports</h4>
+                  <p>Staff accounts with permissions, plus center-wide analytics.</p>
+                </div>
+              </div>
+            </div>
+            <div class="project-tags"><span>Laravel</span><span>MySQL</span><span>Full-Stack</span><span>ERP</span></div>
+            <p class="project-note">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+              Still in local development — not yet deployed to a public domain.
+            </p>
+          </div>
+        </article>
+
+        <!-- NASA Space Apps -->
+        <article class="project-case glass reveal" id="nasa">
+          <div class="project-case-media project-media" data-plb-group="nasa" data-plb-title="NASA Space Apps Challenge — Team &quot;MILLER&quot;">
+            <img src="assets/projects/nasa-space-apps.svg" alt="NASA Space Apps Challenge — Team MILLER" loading="lazy">
+            <span class="project-tag-float">Hackathon</span>
+            <span class="project-zoom-hint" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </span>
+          </div>
+          <div class="project-case-body">
+            <div class="project-case-head">
+              <span class="project-index">06</span>
+              <div>
+                <p class="eyebrow">Hackathon · 2024</p>
+                <h2>NASA Space Apps Challenge — Team "MILLER"</h2>
+              </div>
+            </div>
+            <p>Co-developed a prototype solution for a NASA-defined challenge within a 48-hour local hackathon,
+              working under a tight deadline as part of a small team — placing 6th of 32 teams at demo day.</p>
+            <div class="project-specs">
+              <div class="project-spec-row">
+                <span class="project-spec-num">01</span>
+                <div>
+                  <h4>48-Hour Rapid Build</h4>
+                  <p>Concept-to-prototype under a hard hackathon deadline.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">02</span>
+                <div>
+                  <h4>NASA Open Data Challenge</h4>
+                  <p>Built around a real NASA-defined problem statement and dataset.</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">03</span>
+                <div>
+                  <h4>Small-Team Collaboration</h4>
+                  <p>Co-built the prototype as part of Team "MILLER".</p>
+                </div>
+              </div>
+              <div class="project-spec-row">
+                <span class="project-spec-num">04</span>
+                <div>
+                  <h4>Demo Day Presentation</h4>
+                  <p>Pitched the finished prototype — placing 6th of 32 teams.</p>
+                </div>
+              </div>
+            </div>
+            <div class="project-tags"><span>Hackathon</span><span>2024</span><span>48-Hour Build</span><span>Team Project</span></div>
+          </div>
+        </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing CTA -->
+    <section id="projects-cta">
+      <div class="container">
+        <div class="services-cta-panel glass reveal">
+          <p class="eyebrow" style="justify-content:center;">Let's Build Something</p>
+          <h2>Have a project in mind?</h2>
+          <p>Tell me what you're trying to build, break, or design — I'll get back to you within 24 hours with next steps.</p>
+          <a href="index.html#contact" class="btn btn-primary">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="lightbox" id="project-lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="lightbox-panel">
+      <span class="lightbox-counter" id="plb-counter" hidden></span>
+      <button type="button" class="lightbox-close" id="plb-close" aria-label="Close preview">&times;</button>
+      <button type="button" class="lightbox-nav prev" id="plb-prev" aria-label="Previous" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="lightbox-stage" id="plb-stage">
+        <div class="lightbox-spinner" aria-hidden="true"></div>
+        <img id="plb-image" src="" alt="">
+      </div>
+      <button type="button" class="lightbox-nav next" id="plb-next" aria-label="Next" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <div class="lightbox-info">
+        <div class="lightbox-text">
+          <h3 id="plb-title"></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html#home" class="nav-logo"><img src="assets/favicon.svg" class="nav-logo-mark" alt="agentx512"></a>
+          <p>Penetration tester, bug bounty hunter, and full-stack web developer — securing and building systems end-to-end.</p>
+          <div class="social-row">
+            <a href="https://github.com/agentx512" class="social-btn" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+            <a href="https://www.facebook.com/agentx512/" class="social-btn" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a7.36 7.36 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 1.888-.287 1.779h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647"/></svg></a>
+            <a href="https://linkedin.com/in/agentx512" class="social-btn" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Sections</h5>
+          <ul>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="index.html#education">Education</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="index.html#bughunting">Bug Hunting</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Bug Bounty Platforms</h5>
+          <ul>
+            <li><a href="https://hackerone.com/agentx512" target="_blank" rel="noopener">HackerOne</a></li>
+            <li><a href="https://bugcrowd.com/h/agentx512" target="_blank" rel="noopener">Bugcrowd</a></li>
+            <li><a href="https://cybertalents.com/members/agentx512/profile" target="_blank" rel="noopener">CyberTalents</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Abdullah Hussein. Built with care.</span>
+        <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/vendor/gsap.min.js" defer></script>
+  <script src="/js/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

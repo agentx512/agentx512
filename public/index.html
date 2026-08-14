@@ -1,0 +1,1392 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abdullah Hussein — Penetration Tester, Bug Hunter &amp; Web Developer</title>
+  <meta name="description"
+    content="Abdullah Hussein — Penetration Tester, Bug Bounty Hunter, and Web Developer. Skills, certifications, vulnerability discoveries, and web projects." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Abdullah Hussein — Penetration Tester, Bug Hunter &amp; Web Developer" />
+  <meta property="og:description"
+    content="Web Penetration Tester and Software Engineer — full-stack PHP/MySQL builder and bug bounty hunter with Hall of Fame recognitions." />
+  <meta property="og:image" content="https://agentx512.local/assets/abdullah-photo.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Abdullah Hussein — Penetration Tester, Bug Hunter &amp; Web Developer" />
+  <meta name="twitter:description"
+    content="Web Penetration Tester and Software Engineer — full-stack PHP/MySQL builder and bug bounty hunter with Hall of Fame recognitions." />
+  <meta name="twitter:image" content="https://agentx512.local/assets/abdullah-photo.jpg" />
+  <link rel="canonical" href="https://agentx512.local/" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#14201a" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f6faf8" media="(prefers-color-scheme: light)" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abdullah Mohamed Hussein",
+    "alternateName": "agentx512",
+    "url": "https://agentx512.local/",
+    "image": "https://agentx512.local/assets/abdullah-photo.jpg",
+    "jobTitle": "Penetration Tester & Full-Stack Web Developer",
+    "description": "Penetration Tester, Bug Bounty Hunter, and Web Developer — full-stack PHP/MySQL builder with vulnerability disclosures recognized in U.S. government and corporate Hall of Fame programs.",
+    "email": "mailto:abdullah.mo.contact@gmail.com",
+    "telephone": "+201062110107",
+    "address": { "@type": "PostalAddress", "addressLocality": "Beni Suef", "addressCountry": "EG" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Nahda University" },
+    "worksFor": { "@type": "Organization", "name": "Quality Tests Laboratory" },
+    "knowsAbout": ["Penetration Testing", "Bug Bounty Hunting", "Web Application Security", "PHP", "MySQL", "Python", "JavaScript", "Network Security"],
+    "sameAs": [
+      "https://github.com/agentx512",
+      "https://www.facebook.com/agentx512/",
+      "https://linkedin.com/in/agentx512",
+      "https://hackerone.com/agentx512",
+      "https://bugcrowd.com/h/agentx512",
+      "https://cybertalents.com/members/agentx512/profile"
+    ]
+  }
+  </script>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var theme = saved === 'light' || saved === 'dark'
+          ? saved
+          : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- Preloader -->
+  <div class="preloader" data-boot-target="portfolio">
+    <canvas class="preloader-rain" aria-hidden="true"></canvas>
+    <div class="preloader-mark">
+      <div class="term-window">
+        <div class="term-titlebar">
+          <span class="term-dot d1"></span><span class="term-dot d2"></span><span class="term-dot d3"></span>
+          <span class="term-titletext">agentx512@boot:~</span>
+        </div>
+        <div class="term-body">
+          <img src="assets/favicon.svg" class="preloader-logo" alt="agentx512">
+          <div class="term-log" id="term-log"></div>
+          <div class="term-progress-row">
+            <span class="term-bracket">[</span>
+            <div class="preloader-bar"><span></span></div>
+            <span class="term-bracket">]</span>
+            <span class="preloader-percent">0%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nav -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#home" class="nav-logo"><img src="assets/favicon.svg" class="nav-logo-mark" alt="agentx512"><span
+          class="nav-status" aria-hidden="true"></span></a>
+      <ul class="nav-links">
+        <li><a href="#skills" class="is-active">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#bughunting">Bug Hunting</a></li>
+        <li><a href="#work">Projects</a></li>
+        <li><a href="services.html">Services</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4.5"></circle>
+            <path d="M12 2.5v2.5M12 19v2.5M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2.5 12H5M19 12h2.5M4.2 19.8L6 18M18 6l1.8-1.8">
+            </path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z"></path>
+          </svg>
+        </button>
+        <a href="#contact" class="nav-cta">Contact</a>
+        <button class="nav-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-drawer">
+    <a href="#home">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#bughunting">Bug Hunting</a>
+    <a href="#work">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <main>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <canvas id="hero-canvas"></canvas>
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-inner">
+            <p class="eyebrow">Penetration Tester · Bug Hunter · Full-Stack Developer</p>
+            <h1 class="hero-name">Hi, I'm <span class="gradient-text">Abdullah</span></h1>
+            <p class="hero-tagline">Computer Science student at Nahda University (Class of 2026) from Beni Suef, Egypt.
+              I designed, built, and secured a company's entire internal PHP/MySQL system end-to-end as the sole
+              engineer, and I combine that full-stack background with hands-on offensive security — hunting
+              vulnerabilities on HackerOne and Bugcrowd, with disclosures recognized in the Halls of Fame of U.S.
+              government and corporate Vulnerability Disclosure Programs. I'm currently looking for roles in software
+              engineering and application security.</p>
+            <div class="hero-actions">
+              <a href="#experience" class="btn btn-primary">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="7" width="18" height="13" rx="2" />
+                  <path d="M8 7V5.5A1.5 1.5 0 019.5 4h5A1.5 1.5 0 0116 5.5V7" />
+                  <line x1="3" y1="13" x2="21" y2="13" />
+                </svg>
+                View Experience
+              </a>
+              <a href="assets/Abdullah-Hussein-CV.pdf" class="btn btn-ghost" download>
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3v12" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <path d="M4 19h16" />
+                </svg>
+                Download CV
+              </a>
+            </div>
+            <div class="social-row">
+              <a href="https://github.com/agentx512" class="social-btn" target="_blank" rel="noopener"
+                aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+              <a href="https://www.facebook.com/agentx512/" class="social-btn" target="_blank" rel="noopener"
+                aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a7.36 7.36 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 1.888-.287 1.779h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647"/></svg></a>
+              <a href="https://linkedin.com/in/agentx512" class="social-btn" target="_blank" rel="noopener"
+                aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            </div>
+          </div>
+
+          <div class="hero-photo-wrap">
+            <div class="hero-photo-glow"></div>
+            <div class="hero-photo">
+              <img src="assets/abdullah-photo.jpg" alt="Abdullah Hussein" />
+              <span class="scan-line"></span>
+            </div>
+            <span class="corner corner-tl"></span>
+            <span class="corner corner-tr"></span>
+            <span class="corner corner-bl"></span>
+            <span class="corner corner-br"></span>
+            <span class="photo-tag tag-1">
+              <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z" />
+                <path d="M9 12l2 2 4-4" />
+              </svg>
+              Security
+            </span>
+            <span class="photo-tag tag-2">
+              <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="8 6 3 12 8 18" />
+                <polyline points="16 6 21 12 16 18" />
+              </svg>
+              Developer
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-cue"><span class="line"></span> Scroll</div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Skills</p>
+          <h2 class="reveal">Technologies &amp; Tools I Work With</h2>
+          <p class="reveal">A mix of offensive security and full-stack web development — the stack I use to build,
+            break, and secure systems.</p>
+        </div>
+        <div class="skills-grid">
+
+          <div class="skill-card glass reveal">
+            <div class="skill-card-head">
+              <span class="icon-badge badge-violet">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="8 6 3 12 8 18" />
+                  <polyline points="16 6 21 12 16 18" />
+                </svg>
+              </span>
+              <h3>Programming &amp; Web</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-row">
+                <div class="skill-row-top"><span>PHP</span><span>85%</span></div>
+                <div class="skill-bar"><span data-width="85"></span></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-row-top"><span>SQL / MySQL</span><span>80%</span></div>
+                <div class="skill-bar"><span data-width="80"></span></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-row-top"><span>Python</span><span>75%</span></div>
+                <div class="skill-bar"><span data-width="75"></span></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-row-top"><span>JavaScript (ES6)</span><span>70%</span></div>
+                <div class="skill-bar"><span data-width="70"></span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card glass reveal">
+            <div class="skill-card-head">
+              <span class="icon-badge badge-pink">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z" />
+                  <path d="M9 12l2 2 4-4" />
+                </svg>
+              </span>
+              <h3>Cybersecurity</h3>
+            </div>
+            <div class="check-list">
+              <div class="check-row"><span>Penetration Testing</span>
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="5 13 10 18 19 7" />
+                </svg>
+              </div>
+              <div class="check-row"><span>Bug Bounty Hunting</span>
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="5 13 10 18 19 7" />
+                </svg>
+              </div>
+              <div class="check-row"><span>Network Security</span>
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="5 13 10 18 19 7" />
+                </svg>
+              </div>
+              <div class="check-row"><span>Web App Security</span>
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="5 13 10 18 19 7" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card glass reveal">
+            <div class="skill-card-head">
+              <span class="icon-badge badge-cyan">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9" />
+                  <line x1="3" y1="12" x2="21" y2="12" />
+                  <path d="M12 3c2.6 2.4 4 5.6 4 9s-1.4 6.6-4 9c-2.6-2.4-4-5.6-4-9s1.4-6.6 4-9z" />
+                </svg>
+              </span>
+              <h3>Web Development</h3>
+            </div>
+            <div class="tile-grid">
+              <div class="tile">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="8 6 3 12 8 18" />
+                  <polyline points="16 6 21 12 16 18" />
+                </svg>
+                <p>WordPress</p>
+              </div>
+              <div class="tile">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9" />
+                  <line x1="3" y1="12" x2="21" y2="12" />
+                  <path d="M12 3c2.6 2.4 4 5.6 4 9s-1.4 6.6-4 9c-2.6-2.4-4-5.6-4-9s1.4-6.6 4-9z" />
+                </svg>
+                <p>HTML &amp; CSS</p>
+              </div>
+              <div class="tile">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="2" />
+                  <polyline points="7 9 10.5 12 7 15" />
+                  <line x1="12" y1="15" x2="17" y2="15" />
+                </svg>
+                <p>ES6 JavaScript</p>
+              </div>
+              <div class="tile">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="5 13 10 18 19 7" />
+                </svg>
+                <p>CMS Platforms</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card glass reveal">
+            <div class="skill-card-head">
+              <span class="icon-badge badge-violet">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="2" />
+                  <polyline points="7 9 10.5 12 7 15" />
+                  <line x1="12" y1="15" x2="17" y2="15" />
+                </svg>
+              </span>
+              <h3>Tools &amp; Systems</h3>
+            </div>
+            <div class="icon-row-list">
+              <div class="icon-row">
+                <span class="icon-chip-sm">
+                  <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="16" rx="2" />
+                    <polyline points="7 9 10.5 12 7 15" />
+                    <line x1="12" y1="15" x2="17" y2="15" />
+                  </svg>
+                </span>
+                <span>Kali Linux</span>
+              </div>
+              <div class="icon-row">
+                <span class="icon-chip-sm">
+                  <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z" />
+                    <path d="M9 12l2 2 4-4" />
+                  </svg>
+                </span>
+                <span>Burp Suite</span>
+              </div>
+              <div class="icon-row">
+                <span class="icon-chip-sm">
+                  <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="8" y="8" width="8" height="10" rx="4" />
+                    <line x1="12" y1="8" x2="12" y2="5" />
+                    <line x1="4.5" y1="12" x2="8" y2="12" />
+                    <line x1="16" y1="12" x2="19.5" y2="12" />
+                  </svg>
+                </span>
+                <span>Nmap, Metasploit &amp; Wireshark</span>
+              </div>
+              <div class="icon-row">
+                <span class="icon-chip-sm">
+                  <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="8 6 3 12 8 18" />
+                    <polyline points="16 6 21 12 16 18" />
+                  </svg>
+                </span>
+                <span>Docker &amp; Git</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Experience</p>
+          <h2 class="reveal">My Journey &amp; Achievements</h2>
+          <p class="reveal">From bug bounty programs to web development roles — here's my professional journey.</p>
+        </div>
+
+        <div class="experience-grid">
+          <div class="exp-card glass reveal">
+            <div class="exp-card-head">
+              <span class="icon-badge badge-violet">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 4h10v5a5 5 0 01-10 0V4z" />
+                  <path d="M7 5.5H4.5A2.5 2.5 0 007 8M17 5.5h2.5A2.5 2.5 0 0117 8" />
+                  <line x1="12" y1="13.5" x2="12" y2="17" />
+                  <line x1="9" y1="20.5" x2="15" y2="20.5" />
+                  <path d="M9.5 17h5v1.5a1.5 1.5 0 01-1.5 1.5h-2a1.5 1.5 0 01-1.5-1.5V17z" />
+                </svg>
+              </span>
+              <div>
+                <span class="eyebrow-inline">Achievements</span>
+                <h3>Recognition &amp; Impact</h3>
+              </div>
+            </div>
+            <div class="stats-grid-2x2">
+              <div>
+                <div class="stat-num"><span data-count="4" data-suffix="+">0</span></div>
+                <div class="stat-label">Hall of Fame Recognitions</div>
+              </div>
+              <div>
+                <div class="stat-num"><span data-count="20" data-suffix="+">0</span></div>
+                <div class="stat-label">Certifications &amp; Trainings</div>
+              </div>
+              <div>
+                <div class="stat-num"><span data-count="4" data-suffix="+">0</span></div>
+                <div class="stat-label">Competitions Entered</div>
+              </div>
+              <div>
+                <div class="stat-num"><span data-count="2" data-suffix="+">0</span></div>
+                <div class="stat-label">Years of Hands-On Experience</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-card glass reveal">
+            <div class="exp-card-head">
+              <span class="icon-badge badge-cyan">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="7" width="18" height="13" rx="2" />
+                  <path d="M8 7V5.5A1.5 1.5 0 019.5 4h5A1.5 1.5 0 0116 5.5V7" />
+                  <line x1="3" y1="13" x2="21" y2="13" />
+                </svg>
+              </span>
+              <div>
+                <h3>Current Positions</h3>
+                <p>2024 — Present</p>
+              </div>
+            </div>
+            <div class="current-roles">
+              <div class="current-role">
+                <span class="icon-chip-sm">
+                  <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="9" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <path d="M12 3c2.6 2.4 4 5.6 4 9s-1.4 6.6-4 9c-2.6-2.4-4-5.6-4-9s1.4-6.6 4-9z" />
+                  </svg>
+                </span>
+                <div>
+                  <h5>Software Engineer</h5>
+                  <p>Quality Tests Laboratory</p>
+                  <span>Feb 2026 — Present</span>
+                </div>
+              </div>
+              <div class="current-role">
+                <span class="icon-chip-sm">
+                  <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="8" y="8" width="8" height="10" rx="4" />
+                    <line x1="12" y1="8" x2="12" y2="5" />
+                    <line x1="4.5" y1="12" x2="8" y2="12" />
+                    <line x1="16" y1="12" x2="19.5" y2="12" />
+                  </svg>
+                </span>
+                <div>
+                  <h5>Remote Bug Bounty Hunter</h5>
+                  <p>Bugcrowd</p>
+                  <span>Jun 2024 — Present</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="timeline-heading">Professional Timeline</p>
+        <div class="timeline-v2">
+
+          <div class="tl-row reveal">
+            <div class="tl-card glass">
+              <div class="tl-card-head">
+                <span class="icon-badge badge-cyan">
+                  <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="9" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <path d="M12 3c2.6 2.4 4 5.6 4 9s-1.4 6.6-4 9c-2.6-2.4-4-5.6-4-9s1.4-6.6 4-9z" />
+                  </svg>
+                </span>
+                <div>
+                  <h4>Software Engineer</h4>
+                  <p class="tl-company">Quality Tests Laboratory</p>
+                </div>
+              </div>
+              <span class="tl-date">Feb 2026 — Present</span>
+              <p>Designed, built, and now maintain the company's entire internal PHP/MySQL system end-to-end, from
+                database to UI.</p>
+            </div>
+            <span class="tl-dot"></span>
+          </div>
+
+          <div class="tl-row reverse dot-pink reveal">
+            <span class="tl-dot"></span>
+            <div class="tl-card glass">
+              <div class="tl-card-head">
+                <span class="icon-badge badge-pink">
+                  <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="16" rx="2" />
+                    <polyline points="7 9 10.5 12 7 15" />
+                    <line x1="12" y1="15" x2="17" y2="15" />
+                  </svg>
+                </span>
+                <div>
+                  <h4>Summer Intern, "The Green Leap" Program</h4>
+                  <p class="tl-company">Commercial International Bank (CIB)</p>
+                </div>
+              </div>
+              <span class="tl-date">Sep 2025</span>
+              <p>Selected for CIB's competitive remote summer program; gained exposure to corporate banking operations
+                and digital workflows.</p>
+            </div>
+          </div>
+
+          <div class="tl-row dot-violet reveal">
+            <div class="tl-card glass">
+              <div class="tl-card-head">
+                <span class="icon-badge badge-pink">
+                  <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z" />
+                    <path d="M9 12l2 2 4-4" />
+                  </svg>
+                </span>
+                <div>
+                  <h4>Cybersecurity Associate</h4>
+                  <p class="tl-company">XLR8</p>
+                </div>
+              </div>
+              <span class="tl-date">Feb 2025 — Aug 2025</span>
+              <p>Design and produce digital content that promotes secure online practices and raises cybersecurity
+                awareness.</p>
+            </div>
+            <span class="tl-dot"></span>
+          </div>
+
+          <div class="tl-row reverse reveal">
+            <span class="tl-dot"></span>
+            <div class="tl-card glass">
+              <div class="tl-card-head">
+                <span class="icon-badge badge-violet">
+                  <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="8 6 3 12 8 18" />
+                    <polyline points="16 6 21 12 16 18" />
+                  </svg>
+                </span>
+                <div>
+                  <h4>Head of Technical Team</h4>
+                  <p class="tl-company">IEEE Nahda University Branch</p>
+                </div>
+              </div>
+              <span class="tl-date">Oct 2024 — Nov 2025</span>
+              <p>Led the technical team and organized coding competitions and workshops, after advancing from Technical
+                Team Member (Nov 2023 — Oct 2024).</p>
+            </div>
+          </div>
+
+          <div class="tl-row dot-pink reveal">
+            <div class="tl-card glass">
+              <div class="tl-card-head">
+                <span class="icon-badge badge-cyan">
+                  <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="8" y="8" width="8" height="10" rx="4" />
+                    <line x1="12" y1="8" x2="12" y2="5" />
+                    <line x1="4.5" y1="12" x2="8" y2="12" />
+                    <line x1="16" y1="12" x2="19.5" y2="12" />
+                  </svg>
+                </span>
+                <div>
+                  <h4>Remote Bug Bounty Hunter</h4>
+                  <p class="tl-company">Bugcrowd</p>
+                </div>
+              </div>
+              <span class="tl-date">Jun 2024 — Present</span>
+              <p>Identify, validate, and report web app vulnerabilities mapped to the OWASP Top 10, with reproducible
+                PoCs and remediation guidance.</p>
+            </div>
+            <span class="tl-dot"></span>
+          </div>
+
+        </div>
+
+        <div class="section-cta reveal">
+          <a href="experience.html" class="btn btn-primary">
+            <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="7" width="18" height="13" rx="2" />
+              <path d="M8 7V5.5A1.5 1.5 0 019.5 4h5A1.5 1.5 0 0116 5.5V7" />
+              <line x1="3" y1="13" x2="21" y2="13" />
+            </svg>
+            View Full Professional Experience
+            <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="4" y1="12" x2="19" y2="12" />
+              <polyline points="13 6 19 12 13 18" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Education</p>
+          <h2 class="reveal">Academic Background</h2>
+          <p class="reveal">The Computer Science coursework underpinning the security and engineering work above.</p>
+        </div>
+
+        <div class="experience-grid">
+          <div class="exp-card glass reveal">
+            <div class="exp-card-head">
+              <span class="icon-badge badge-violet">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3L2 8l10 5 10-5-10-5z" />
+                  <path d="M6 10.5V16c0 1.5 2.5 3 6 3s6-1.5 6-3v-5.5" />
+                  <path d="M22 8v6" />
+                </svg>
+              </span>
+              <div>
+                <span class="eyebrow-inline">2022 — 2026</span>
+                <h3>Bachelor of Computer Science</h3>
+              </div>
+            </div>
+            <p class="tl-company" style="margin:4px 0 16px;">Nahda University</p>
+            <div class="check-list">
+              <div class="check-row"><span>Data Structures &amp; Algorithms</span>
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="5 13 10 18 19 7" />
+                </svg>
+              </div>
+              <div class="check-row"><span>Operating Systems</span>
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="5 13 10 18 19 7" />
+                </svg>
+              </div>
+              <div class="check-row"><span>Computer Networks</span>
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="5 13 10 18 19 7" />
+                </svg>
+              </div>
+              <div class="check-row"><span>Web Development</span>
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="5 13 10 18 19 7" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-card glass reveal">
+            <div class="exp-card-head">
+              <span class="icon-badge badge-cyan">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9" />
+                  <line x1="3" y1="12" x2="21" y2="12" />
+                  <path d="M12 3c2.6 2.4 4 5.6 4 9s-1.4 6.6-4 9c-2.6-2.4-4-5.6-4-9s1.4-6.6 4-9z" />
+                </svg>
+              </span>
+              <div>
+                <h3>Languages &amp; Interests</h3>
+              </div>
+            </div>
+            <div class="skill-list">
+              <div class="skill-row-top"><span>Arabic</span><span>Native</span></div>
+              <div class="skill-row-top"><span>English</span><span>Intermediate (B1)</span></div>
+            </div>
+            <p style="margin-top:18px;">Interests: Capture-the-Flag (CTF) competitions, security research, and technical
+              content creation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Certifications</p>
+          <h2 class="reveal">Professional Recognition</h2>
+          <p class="reveal">20+ certifications and training courses across offensive security, networks, and web
+            development, plus national and international competition placements.</p>
+        </div>
+
+        <div class="certs-groups">
+
+          <article class="cert-group-card glass c-pink reveal">
+            <div class="cert-group-head">
+              <span class="icon-badge badge-pink">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z" />
+                  <path d="M9 12l2 2 4-4" />
+                </svg>
+              </span>
+              <div>
+                <h3>Cybersecurity</h3>
+                <p>Professional Certifications</p>
+              </div>
+            </div>
+            <div class="cert-list">
+              <div class="cert-list-row">
+                <h5>eJPT — eLearnSecurity Junior Penetration Tester</h5>
+                <p>Netriders Academy ([Year])</p>
+              </div>
+              <div class="cert-list-row">
+                <h5>Google Cybersecurity Professional Certificate</h5>
+                <p>Coursera ([Year])</p>
+              </div>
+              <div class="cert-list-row">
+                <h5>Ethical Hacker</h5>
+                <p>Cisco ([Year])</p>
+              </div>
+              <div class="cert-list-row">
+                <h5>Cybersecurity Fundamentals</h5>
+                <p>IBM ([Year])</p>
+              </div>
+            </div>
+            <a href="certifications.html" class="cert-group-cta">View All
+              <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="4" y1="12" x2="19" y2="12" />
+                <polyline points="13 6 19 12 13 18" />
+              </svg>
+            </a>
+          </article>
+
+          <article class="cert-group-card glass reveal">
+            <div class="cert-group-head">
+              <span class="icon-badge badge-cyan">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9" />
+                  <line x1="3" y1="12" x2="21" y2="12" />
+                  <path d="M12 3c2.6 2.4 4 5.6 4 9s-1.4 6.6-4 9c-2.6-2.4-4-5.6-4-9s1.4-6.6 4-9z" />
+                </svg>
+              </span>
+              <div>
+                <h3>Web Development</h3>
+                <p>Development Certifications</p>
+              </div>
+            </div>
+            <div class="cert-list">
+              <div class="cert-list-row">
+                <h5>Building Web Applications using PHP &amp; MySQL</h5>
+                <p>MaharaTech ([Year])</p>
+              </div>
+              <div class="cert-list-row">
+                <h5>Modern JavaScript: ES6 and Beyond</h5>
+                <p>MaharaTech ([Year])</p>
+              </div>
+              <div class="cert-list-row">
+                <h5>Python Track — Intro, Intermediate &amp; Pandas</h5>
+                <p>DataCamp ([Year])</p>
+              </div>
+            </div>
+            <a href="certifications.html" class="cert-group-cta">View All
+              <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="4" y1="12" x2="19" y2="12" />
+                <polyline points="13 6 19 12 13 18" />
+              </svg>
+            </a>
+          </article>
+
+          <article class="cert-group-card glass c-violet reveal">
+            <div class="cert-group-head">
+              <span class="icon-badge badge-violet">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 4h10v5a5 5 0 01-10 0V4z" />
+                  <path d="M7 5.5H4.5A2.5 2.5 0 007 8M17 5.5h2.5A2.5 2.5 0 0117 8" />
+                  <line x1="12" y1="13.5" x2="12" y2="17" />
+                  <line x1="9" y1="20.5" x2="15" y2="20.5" />
+                  <path d="M9.5 17h5v1.5a1.5 1.5 0 01-1.5 1.5h-2a1.5 1.5 0 01-1.5-1.5V17z" />
+                </svg>
+              </span>
+              <div>
+                <h3>Awards</h3>
+                <p>Competitions &amp; Recognition</p>
+              </div>
+            </div>
+            <div class="cert-list">
+              <div class="cert-list-row">
+                <h5>Huawei ICT National Competition</h5>
+                <p>Silver Medal, Network Track (2025)</p>
+              </div>
+              <div class="cert-list-row">
+                <h5>IEEE Nahda University Branch</h5>
+                <p>Best Outstanding Contribution (2025)</p>
+              </div>
+              <div class="cert-list-row">
+                <h5>NASA Space Apps Local Hackathon</h5>
+                <p>6th of 32 teams — "MILLER" (2024)</p>
+              </div>
+            </div>
+            <a href="certifications.html" class="cert-group-cta">View All
+              <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="4" y1="12" x2="19" y2="12" />
+                <polyline points="13 6 19 12 13 18" />
+              </svg>
+            </a>
+          </article>
+
+        </div>
+
+        <p class="timeline-heading">Special Recognitions</p>
+        <div class="recognitions-grid">
+
+          <article class="recognition-card glass reveal">
+            <div class="recognition-head">
+              <span class="icon-badge badge-cyan">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 4h10v5a5 5 0 01-10 0V4z" />
+                  <path d="M7 5.5H4.5A2.5 2.5 0 007 8M17 5.5h2.5A2.5 2.5 0 0117 8" />
+                  <line x1="12" y1="13.5" x2="12" y2="17" />
+                  <line x1="9" y1="20.5" x2="15" y2="20.5" />
+                  <path d="M9.5 17h5v1.5a1.5 1.5 0 01-1.5 1.5h-2a1.5 1.5 0 01-1.5-1.5V17z" />
+                </svg>
+              </span>
+              <div>
+                <h4>Silver Medal</h4>
+                <span>Huawei ICT National Competition (2025)</span>
+              </div>
+            </div>
+            <p>Placed 2nd nationally in the Network Track of Huawei's ICT Competition, a national contest testing
+              networking and infrastructure skills.</p>
+            <p class="recognition-stat"><strong>Achievement:</strong> Network Track, National Level</p>
+          </article>
+
+          <article class="recognition-card glass reveal">
+            <div class="recognition-head">
+              <span class="icon-badge badge-pink">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z" />
+                  <path d="M9 12l2 2 4-4" />
+                </svg>
+              </span>
+              <div>
+                <h4>Best Outstanding Contribution</h4>
+                <span>IEEE Nahda University Branch (2025)</span>
+              </div>
+            </div>
+            <p>Recognized for leadership as Head of Technical Team — organizing coding competitions, workshops, and
+              skill-building sessions for university members.</p>
+            <p class="recognition-stat"><strong>Recognition:</strong> Branch-level leadership award</p>
+          </article>
+
+          <article class="recognition-card glass reveal">
+            <div class="recognition-head">
+              <span class="icon-badge badge-violet">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="8" y="8" width="8" height="10" rx="4" />
+                  <line x1="12" y1="8" x2="12" y2="5" />
+                  <line x1="4.5" y1="12" x2="8" y2="12" />
+                  <line x1="16" y1="12" x2="19.5" y2="12" />
+                </svg>
+              </span>
+              <div>
+                <h4>NASA Space Apps Local Hackathon</h4>
+                <span>Team "MILLER" (2024)</span>
+              </div>
+            </div>
+            <p>Co-developed a prototype solution for a NASA-defined challenge within a 48-hour hackathon.</p>
+            <p class="recognition-stat"><strong>Selection:</strong> 6th of 32 teams</p>
+          </article>
+
+          <article class="recognition-card glass reveal">
+            <div class="recognition-head">
+              <span class="icon-badge badge-cyan">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="2" />
+                  <polyline points="7 9 10.5 12 7 15" />
+                  <line x1="12" y1="15" x2="17" y2="15" />
+                </svg>
+              </span>
+              <div>
+                <h4>Vulnerability Disclosure Hall of Fame</h4>
+                <span>State of Maryland</span>
+              </div>
+            </div>
+            <p>Publicly acknowledged in the State of Maryland's Vulnerability Disclosure Program for a valid,
+              responsibly-disclosed security finding — one of four such Hall of Fame recognitions (Maryland, Ohio
+              Attorney General's Office, Belong, Genius).</p>
+            <p class="recognition-stat"><strong>Recognition:</strong> U.S. state government VDP Hall of Fame</p>
+          </article>
+
+        </div>
+
+        <div class="section-cta reveal">
+          <a href="certifications.html" class="btn btn-primary">
+            <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 4h10v5a5 5 0 01-10 0V4z" />
+              <path d="M7 5.5H4.5A2.5 2.5 0 007 8M17 5.5h2.5A2.5 2.5 0 0117 8" />
+              <line x1="12" y1="13.5" x2="12" y2="17" />
+              <line x1="9" y1="20.5" x2="15" y2="20.5" />
+              <path d="M9.5 17h5v1.5a1.5 1.5 0 01-1.5 1.5h-2a1.5 1.5 0 01-1.5-1.5V17z" />
+            </svg>
+            View All Certifications &amp; Awards
+            <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="4" y1="12" x2="19" y2="12" />
+              <polyline points="13 6 19 12 13 18" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bug Hunting -->
+    <section id="bughunting">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Bug Hunting &amp; Security Research</p>
+          <h2 class="reveal">Vulnerability Discoveries</h2>
+          <p class="reveal">Publicly acknowledged, responsibly-disclosed findings across U.S. government and corporate
+            Vulnerability Disclosure Programs.</p>
+        </div>
+
+        <div class="bh-stats-row reveal">
+          <div class="bh-stat-chip glass"><strong class="stat-loading" data-live-stat="bugcrowd.vulnerabilities" data-fallback="58">—</strong><span>Vulnerabilities</span></div>
+          <div class="bh-stat-chip glass"><strong class="stat-loading" data-live-stat="bugcrowd.accuracy" data-live-suffix="%" data-fallback="93.55">—</strong><span>Accuracy</span></div>
+          <div class="bh-stat-chip glass"><strong class="stat-loading" data-live-stat="bugcrowd.points" data-fallback="10">—</strong><span>All-Time Points</span></div>
+        </div>
+
+        <div class="bh-subhead">
+          <h3 class="reveal">CyberTalents — CTF &amp; Cybersecurity Rankings</h3>
+          <a href="https://cybertalents.com/members/agentx512/profile" target="_blank" rel="noopener" class="reveal">
+            View live profile
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
+          </a>
+        </div>
+        <div class="bh-stats-row reveal">
+          <div class="bh-stat-chip glass"><strong class="stat-loading" data-live-stat="cybertalents.egyptRank" data-live-prefix="#" data-fallback="58">—</strong><span>Rank in Egypt</span></div>
+          <div class="bh-stat-chip glass"><strong class="stat-loading" data-live-stat="cybertalents.worldRank" data-live-prefix="#" data-fallback="168">—</strong><span>World Rank</span></div>
+          <div class="bh-stat-chip glass"><strong class="stat-loading" data-live-stat="cybertalents.points" data-fallback="11550">—</strong><span>Points</span></div>
+        </div>
+
+        <div class="bh-subhead">
+          <h3 class="reveal">Hall of Fame Recognitions</h3>
+          <a href="certifications.html#badges" class="reveal">
+            Bugcrowd achievement badges
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
+          </a>
+        </div>
+        <div class="bounty-grid">
+
+          <article class="bounty-card glass reveal">
+            <div class="bounty-head">
+              <span class="icon-badge badge-pink">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="8" y="8" width="8" height="10" rx="4" />
+                  <line x1="12" y1="8" x2="12" y2="5" />
+                  <line x1="9" y1="5.5" x2="7.5" y2="4" />
+                  <line x1="15" y1="5.5" x2="16.5" y2="4" />
+                  <line x1="4.5" y1="12" x2="8" y2="12" />
+                  <line x1="16" y1="12" x2="19.5" y2="12" />
+                  <line x1="5.5" y1="18" x2="8.5" y2="16" />
+                  <line x1="18.5" y1="18" x2="15.5" y2="16" />
+                </svg>
+              </span>
+              <div>
+                <h3>State of Maryland</h3>
+                <p>U.S. State Government · VDP</p>
+              </div>
+            </div>
+            <div class="severity-rows">
+              <div class="severity-row"><span>Valid disclosure</span><span class="sev-count sev-critical">✓</span></div>
+            </div>
+            <span class="hof-badge">Hall of Fame</span>
+          </article>
+
+          <article class="bounty-card glass reveal">
+            <div class="bounty-head">
+              <span class="icon-badge badge-violet">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="8" y="8" width="8" height="10" rx="4" />
+                  <line x1="12" y1="8" x2="12" y2="5" />
+                  <line x1="9" y1="5.5" x2="7.5" y2="4" />
+                  <line x1="15" y1="5.5" x2="16.5" y2="4" />
+                  <line x1="4.5" y1="12" x2="8" y2="12" />
+                  <line x1="16" y1="12" x2="19.5" y2="12" />
+                  <line x1="5.5" y1="18" x2="8.5" y2="16" />
+                  <line x1="18.5" y1="18" x2="15.5" y2="16" />
+                </svg>
+              </span>
+              <div>
+                <h3>Ohio Attorney General's Office</h3>
+                <p>U.S. State Government · VDP</p>
+              </div>
+            </div>
+            <div class="severity-rows">
+              <div class="severity-row"><span>Valid disclosure</span><span class="sev-count sev-critical">✓</span></div>
+            </div>
+            <span class="hof-badge">Hall of Fame</span>
+          </article>
+
+          <article class="bounty-card glass reveal">
+            <div class="bounty-head">
+              <span class="icon-badge badge-cyan">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="8" y="8" width="8" height="10" rx="4" />
+                  <line x1="12" y1="8" x2="12" y2="5" />
+                  <line x1="9" y1="5.5" x2="7.5" y2="4" />
+                  <line x1="15" y1="5.5" x2="16.5" y2="4" />
+                  <line x1="4.5" y1="12" x2="8" y2="12" />
+                  <line x1="16" y1="12" x2="19.5" y2="12" />
+                  <line x1="5.5" y1="18" x2="8.5" y2="16" />
+                  <line x1="18.5" y1="18" x2="15.5" y2="16" />
+                </svg>
+              </span>
+              <div>
+                <h3>Belong</h3>
+                <p>Corporate · VDP</p>
+              </div>
+            </div>
+            <div class="severity-rows">
+              <div class="severity-row"><span>Valid disclosure</span><span class="sev-count sev-critical">✓</span></div>
+            </div>
+            <span class="hof-badge">Hall of Fame</span>
+          </article>
+
+          <article class="bounty-card glass reveal">
+            <div class="bounty-head">
+              <span class="icon-badge badge-pink">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="8" y="8" width="8" height="10" rx="4" />
+                  <line x1="12" y1="8" x2="12" y2="5" />
+                  <line x1="9" y1="5.5" x2="7.5" y2="4" />
+                  <line x1="15" y1="5.5" x2="16.5" y2="4" />
+                  <line x1="4.5" y1="12" x2="8" y2="12" />
+                  <line x1="16" y1="12" x2="19.5" y2="12" />
+                  <line x1="5.5" y1="18" x2="8.5" y2="16" />
+                  <line x1="18.5" y1="18" x2="15.5" y2="16" />
+                </svg>
+              </span>
+              <div>
+                <h3>Genius</h3>
+                <p>Corporate · VDP</p>
+              </div>
+            </div>
+            <div class="severity-rows">
+              <div class="severity-row"><span>Valid disclosure</span><span class="sev-count sev-critical">✓</span></div>
+            </div>
+            <span class="hof-badge">Hall of Fame</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="work">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Web Projects</p>
+          <h2 class="reveal">Web Development Work</h2>
+          <p class="reveal">Full-stack builds, from corporate and internal systems to client-facing marketing and e-commerce sites.</p>
+        </div>
+        <div class="projects-grid">
+
+          <article class="project-card is-featured glass reveal">
+            <div class="project-media" data-plb-group="qtlweb-home" data-plb-title="QTL — Corporate Website" role="button" tabindex="0" aria-label="Open screenshot preview">
+              <img src="assets/projects/qtlweb-01-home.webp" alt="QTL corporate website homepage hero" loading="lazy">
+              <span class="project-tag-float">Live Site</span>
+              <span class="project-zoom-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+            </div>
+            <div class="project-body">
+              <h3>Quality Tests Laboratory — Corporate Website</h3>
+              <p>Bilingual public site for QTL's Saudi operations — services, standards-referenced lab tests,
+                accreditation, and real client project work across the Kingdom.</p>
+              <div class="project-tags"><span>Web Design</span><span>Bilingual (EN/AR)</span><span>Live Site</span></div>
+            </div>
+          </article>
+
+          <article class="project-card is-compact glass reveal">
+            <div class="project-media is-logo-frame">
+              <img src="assets/projects/qtl-logo.webp" alt="Quality Tests Laboratory logo" loading="lazy">
+              <span class="project-tag-float">Featured</span>
+            </div>
+            <div class="project-body">
+              <h3>QTL — Internal Operations System</h3>
+              <p>Full PHP/MySQL LIMS built and shipped as the sole engineer.</p>
+              <div class="project-tags"><span>PHP</span><span>Full-Stack</span></div>
+            </div>
+          </article>
+
+          <article class="project-card is-compact glass reveal">
+            <div class="project-media" data-plb-group="grey-home" data-plb-title="Grey Agency — Marketing &amp; Media Website" role="button" tabindex="0" aria-label="Open screenshot preview">
+              <img src="assets/projects/grey-01-hero.webp" alt="Grey Agency homepage hero" loading="lazy">
+              <span class="project-tag-float">Live Site</span>
+              <span class="project-zoom-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+            </div>
+            <div class="project-body">
+              <h3>Grey Agency — Marketing Website</h3>
+              <p>Dark, cinematic one-page site for a branding and media production agency.</p>
+              <div class="project-tags"><span>Web Design</span><span>Live Site</span></div>
+            </div>
+          </article>
+
+          <article class="project-card is-compact glass reveal">
+            <div class="project-media" data-plb-group="arabkb-home" data-plb-title="ArabKB — K-Beauty E-Commerce Store" role="button" tabindex="0" aria-label="Open screenshot preview">
+              <img src="assets/projects/arabkb-01-hero.webp" alt="ArabKB store homepage hero" loading="lazy">
+              <span class="project-tag-float">Live Site</span>
+              <span class="project-zoom-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+            </div>
+            <div class="project-body">
+              <h3>ArabKB — K-Beauty Store</h3>
+              <p>E-commerce storefront for a Korean skincare &amp; beauty products shop.</p>
+              <div class="project-tags"><span>E-Commerce</span><span>Live Site</span></div>
+            </div>
+          </article>
+
+          <article class="project-card is-compact glass reveal">
+            <div class="project-media" data-plb-group="center-home" data-plb-title="Center ERP — Educational Center Management System" role="button" tabindex="0" aria-label="Open screenshot preview">
+              <img src="assets/projects/center-01-dashboard.webp" alt="Center ERP dashboard overview" loading="lazy">
+              <span class="project-tag-float">Local Build</span>
+              <span class="project-zoom-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+            </div>
+            <div class="project-body">
+              <h3>Center ERP — Management System</h3>
+              <p>Full ERP for a private tutoring center — students, scheduling, finance.</p>
+              <div class="project-tags"><span>Laravel</span><span>ERP</span></div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="section-cta reveal">
+          <a href="projects.html" class="btn btn-primary">
+            <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="7" width="18" height="10" rx="1" />
+              <line x1="7" y1="7" x2="7" y2="17" />
+              <line x1="11" y1="7" x2="11" y2="17" />
+            </svg>
+            View All Projects
+            <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="4" y1="12" x2="19" y2="12" />
+              <polyline points="13 6 19 12 13 18" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-grid glass reveal">
+          <div class="contact-info">
+            <p class="eyebrow">Contact</p>
+            <h2>Ready to work together?</h2>
+            <p>I'm open to bug bounty collaborations, penetration testing engagements, and full-stack web development
+              projects.</p>
+            <div class="info-rows">
+              <div class="info-row">
+                <span class="icon-chip-sm">
+                  <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                    <polyline points="3 6.5 12 13 21 6.5" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="info-label">Email</p>
+                  <p class="info-value">abdullah.mo.contact@gmail.com</p>
+                </div>
+              </div>
+              <div class="info-row">
+                <span class="icon-chip-sm">
+                  <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M6.5 3h3l1.5 4.5-2 1.5a11 11 0 006 6l1.5-2 4.5 1.5v3a2 2 0 01-2 2C10.5 19.5 4.5 13.5 4.5 5a2 2 0 012-2z" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="info-label">Phone</p>
+                  <p class="info-value">+20 106 211 0107</p>
+                </div>
+              </div>
+              <div class="info-row">
+                <span class="icon-chip-sm">
+                  <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="9" />
+                    <polyline points="12 7 12 12 15.5 14" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="info-label">Response Time</p>
+                  <p class="info-value">Within 24 hours</p>
+                </div>
+              </div>
+            </div>
+            <div class="social-row">
+              <a href="https://github.com/agentx512" class="social-btn" target="_blank" rel="noopener"
+                aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+              <a href="https://www.facebook.com/agentx512/" class="social-btn" target="_blank" rel="noopener"
+                aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a7.36 7.36 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 1.888-.287 1.779h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647"/></svg></a>
+              <a href="https://linkedin.com/in/agentx512" class="social-btn" target="_blank" rel="noopener"
+                aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            </div>
+          </div>
+          <div class="contact-form-wrap">
+            <h3>Send a Message</h3>
+            <p>Fill out the form below and I'll get back to you soon.</p>
+            <form id="contact-form" novalidate>
+              <div class="form-row-2">
+                <div class="form-field">
+                  <label for="cf-name">Full Name *</label>
+                  <input id="cf-name" type="text" name="name" required minlength="2" maxlength="100"
+                    placeholder="Enter your name" />
+                </div>
+                <div class="form-field">
+                  <label for="cf-email">Email Address *</label>
+                  <input id="cf-email" type="email" name="email" required maxlength="255"
+                    placeholder="Enter your email" />
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="cf-phone">Phone Number</label>
+                <input id="cf-phone" type="tel" name="phone" maxlength="30" placeholder="Enter your phone (optional)" />
+              </div>
+              <div class="form-field">
+                <label for="cf-message">Message *</label>
+                <textarea id="cf-message" name="message" required minlength="10" maxlength="2000" rows="5"
+                  placeholder="Tell me about your project or opportunity"></textarea>
+              </div>
+              <div class="form-field hp-field" aria-hidden="true">
+                <label for="cf-website">Leave this field empty</label>
+                <input id="cf-website" type="text" name="website" tabindex="-1" autocomplete="off" />
+              </div>
+              <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+              <p class="form-status" id="form-status" role="status"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="lightbox" id="project-lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="lightbox-panel">
+      <span class="lightbox-counter" id="plb-counter" hidden></span>
+      <button type="button" class="lightbox-close" id="plb-close" aria-label="Close preview">&times;</button>
+      <button type="button" class="lightbox-nav prev" id="plb-prev" aria-label="Previous" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="lightbox-stage" id="plb-stage">
+        <div class="lightbox-spinner" aria-hidden="true"></div>
+        <img id="plb-image" src="" alt="">
+      </div>
+      <button type="button" class="lightbox-nav next" id="plb-next" aria-label="Next" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <div class="lightbox-info">
+        <div class="lightbox-text">
+          <h3 id="plb-title"></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo"><img src="assets/favicon.svg" class="nav-logo-mark" alt="agentx512"></a>
+          <p>Penetration tester, bug bounty hunter, and full-stack web developer — securing and building systems
+            end-to-end.</p>
+          <div class="social-row">
+            <a href="https://github.com/agentx512" class="social-btn" target="_blank" rel="noopener"
+              aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+            <a href="https://www.facebook.com/agentx512/" class="social-btn" target="_blank" rel="noopener"
+              aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a7.36 7.36 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 1.888-.287 1.779h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647"/></svg></a>
+            <a href="https://linkedin.com/in/agentx512" class="social-btn" target="_blank" rel="noopener"
+              aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Sections</h5>
+          <ul>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#bughunting">Bug Hunting</a></li>
+            <li><a href="#work">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Bug Bounty Platforms</h5>
+          <ul>
+            <li><a href="https://hackerone.com/agentx512" target="_blank" rel="noopener">HackerOne</a></li>
+            <li><a href="https://bugcrowd.com/h/agentx512" target="_blank" rel="noopener">Bugcrowd</a></li>
+            <li><a href="https://cybertalents.com/members/agentx512/profile" target="_blank" rel="noopener">CyberTalents</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Abdullah Hussein. Built with care.</span>
+        <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/vendor/three.min.js" defer></script>
+  <script src="js/vendor/gsap.min.js" defer></script>
+  <script src="js/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="js/three-scene.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>
