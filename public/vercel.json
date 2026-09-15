@@ -6,10 +6,7 @@
     { "source": "/index", "destination": "/", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/services", "destination": "/api/forbidden" },
-    { "source": "/services.html", "destination": "/api/forbidden" },
-    { "source": "/servicesS", "destination": "/api/forbidden" },
-    { "source": "/servicesS.html", "destination": "/api/forbidden" }
+    { "source": "/:page([Ss][Ee][Rr][Vv][Ii][Cc][Ee][Ss][Ss]?(?:\\.[Hh][Tt][Mm][Ll]?)?)", "destination": "/api/forbidden" }
   ],
   "functions": {
     "api/forbidden.js": { "includeFiles": "403.html" }
