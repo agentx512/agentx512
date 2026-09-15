@@ -1188,7 +1188,6 @@ section { position: relative; padding: 160px 0; }
 .form-status { margin-top: 12px; font-size: 0.85rem; min-height: 1.2em; }
 .form-status.is-success { color: var(--accent-2); }
 .form-status.is-error { color: var(--danger); }
-.form-privacy { margin-top: 6px; font-size: 0.72rem; line-height: 1.5; color: var(--text-faint); }
 
 /* ---------- Footer ---------- */
 footer { padding: 64px 0 32px; }
