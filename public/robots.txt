@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://agentx512.local/sitemap.xml
+Sitemap: https://www.agentx512.tech/sitemap.xml

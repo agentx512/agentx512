@@ -2,7 +2,7 @@
   "name": "Abdullah Hussein — Penetration Tester & Web Developer",
   "short_name": "agentx512",
   "description": "Portfolio of Abdullah Hussein — Penetration Tester, Bug Bounty Hunter, and Full-Stack Web Developer.",
-  "start_url": "/index.html",
+  "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",

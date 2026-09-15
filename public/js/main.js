@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try { url = new URL(href, window.location.href); } catch (e) { return null; }
     if (url.origin !== window.location.origin) return null;
     if (url.pathname === window.location.pathname) return null; // same-page anchor
-    if (!/\.html?$/i.test(url.pathname)) return null;
+    if (/\.[a-z0-9]+$/i.test(url.pathname)) return null; // asset link (pdf, image, etc.), not a page route
     return url;
   }
 
@@ -272,6 +272,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     pageTransition.classList.add('is-active');
     setTimeout(() => { window.location.href = url.href; }, 380);
+  });
+
+  // Back/forward navigation can restore this page from the bfcache exactly as
+  // it was when we left — mid-transition, with the overlay still active (no
+  // DOMContentLoaded fires on a bfcache restore, so nothing else would clear it).
+  window.addEventListener('pageshow', (e) => {
+    if (e.persisted) pageTransition.classList.remove('is-active');
   });
 
   /* ---------- Custom context menu + devtools deterrent ----------
@@ -479,7 +486,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (action === 'home') {
       const home = document.getElementById('home');
       if (home) home.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth' });
-      else window.location.href = '/index.html#home';
+      else window.location.href = '/#home';
     } else if (action === 'cv') {
       const a = document.createElement('a');
       a.href = '/assets/Abdullah-Hussein-CV.pdf';
@@ -490,7 +497,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (action === 'contact') {
       const contact = document.getElementById('contact');
       if (contact) contact.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth' });
-      else window.location.href = '/index.html#contact';
+      else window.location.href = '/#contact';
     }
     closeCtxMenu();
   });
@@ -564,13 +571,105 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- Back to top ---------- */
   const backToTop = document.getElementById('back-to-top');
-  backToTop && backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
-  });
+  if (backToTop) {
+    const toggleBackToTop = () => backToTop.classList.toggle('is-visible', window.scrollY > 500);
+    toggleBackToTop();
+    window.addEventListener('scroll', toggleBackToTop, { passive: true });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
+    });
+  }
 
   /* ---------- Contact form ---------- */
   const contactForm = document.getElementById('contact-form');
   const formStatus = document.getElementById('form-status');
+
+  // Device context sent along with each message (disclosed under the form).
+  // All of it is self-reported by the browser, so /api/contact treats it as
+  // hints only — the IP, location and User-Agent it records come from the
+  // request itself.
+  let formStartedAt = 0;
+  contactForm && contactForm.addEventListener('input', () => {
+    if (!formStartedAt) formStartedAt = performance.now();
+  });
+  contactForm && contactForm.addEventListener('reset', () => {
+    formStartedAt = 0;
+  });
+
+  function webglRenderer() {
+    try {
+      const gl = document.createElement('canvas').getContext('webgl');
+      if (!gl) return '';
+      const info = gl.getExtension('WEBGL_debug_renderer_info');
+      const renderer = info
+        ? `${gl.getParameter(info.UNMASKED_VENDOR_WEBGL)} / ${gl.getParameter(info.UNMASKED_RENDERER_WEBGL)}`
+        : gl.getParameter(gl.RENDERER);
+      gl.getExtension('WEBGL_lose_context')?.loseContext();
+      return String(renderer || '');
+    } catch (err) {
+      return '';
+    }
+  }
+
+  // Classic canvas fingerprint: the same drawing rasterises slightly
+  // differently across GPU, driver and font stacks.
+  function canvasSignature() {
+    try {
+      const canvas = document.createElement('canvas');
+      canvas.width = 240;
+      canvas.height = 60;
+      const ctx = canvas.getContext('2d');
+      ctx.textBaseline = 'top';
+      ctx.font = '16px Arial';
+      ctx.fillStyle = '#f60';
+      ctx.fillRect(100, 1, 62, 20);
+      ctx.fillStyle = '#069';
+      ctx.fillText('agentx512 fp ✓', 2, 15);
+      return canvas.toDataURL();
+    } catch (err) {
+      return '';
+    }
+  }
+
+  async function collectClientMeta() {
+    const nav = navigator;
+    const meta = {
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || '',
+      localTime: new Date().toString(),
+      languages: (nav.languages && nav.languages.length ? nav.languages : [nav.language]).join(', '),
+      platform: nav.userAgentData?.platform || nav.platform || '',
+      mobile: nav.userAgentData ? String(nav.userAgentData.mobile) : '',
+      screen: `${screen.width}x${screen.height}, ${screen.colorDepth}-bit, ${window.devicePixelRatio}x`,
+      viewport: `${window.innerWidth}x${window.innerHeight}`,
+      cpuCores: String(nav.hardwareConcurrency || ''),
+      memoryGb: String(nav.deviceMemory || ''),
+      touchPoints: String(nav.maxTouchPoints || 0),
+      connection: nav.connection?.effectiveType || '',
+      gpu: webglRenderer(),
+      theme: document.documentElement.getAttribute('data-theme') || '',
+      referrer: document.referrer,
+      userAgent: nav.userAgent,
+      webdriver: String(!!nav.webdriver),
+      timeOnPageSec: String(Math.round(performance.now() / 1000)),
+      fillTimeSec: formStartedAt ? String(Math.round((performance.now() - formStartedAt) / 1000)) : '',
+      fingerprint: '',
+    };
+
+    // Hash of stable signals only (no viewport, zoom or clock), so the same
+    // browser shows the same short ID when it writes again. crypto.subtle
+    // needs HTTPS, so this stays empty on plain-HTTP local dev.
+    try {
+      const source = [meta.userAgent, meta.languages, meta.timezone, meta.platform,
+        `${screen.width}x${screen.height}x${screen.colorDepth}`, meta.cpuCores, meta.memoryGb,
+        meta.touchPoints, meta.gpu, canvasSignature()].join('|');
+      const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(source));
+      meta.fingerprint = Array.from(new Uint8Array(digest).slice(0, 8), (b) => b.toString(16).padStart(2, '0')).join('');
+    } catch (err) {
+      meta.fingerprint = '';
+    }
+    return meta;
+  }
+
   contactForm && contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
@@ -591,11 +690,29 @@ document.addEventListener('DOMContentLoaded', () => {
     formStatus.className = 'form-status';
 
     try {
-      const res = await fetch('contact.php', {
+      const payload = {
+        name: contactForm.elements.name?.value?.trim() || '',
+        email: contactForm.elements.email?.value?.trim() || '',
+        phone: contactForm.elements.phone?.value?.trim() || '',
+        message: contactForm.elements.message?.value?.trim() || '',
+        website: contactForm.elements.website?.value?.trim() || '',
+      };
+      try {
+        payload.meta = await collectClientMeta();
+      } catch (err) {
+        // Device details are optional — the message still goes out without them.
+      }
+
+      const res = await fetch('/api/contact', {
         method: 'POST',
-        body: new FormData(contactForm),
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify(payload),
       });
-      const data = await res.json();
+
+      const data = await res.json().catch(() => ({}));
       if (res.ok && data.ok) {
         formStatus.textContent = "Message sent — thanks! I'll get back to you soon.";
         formStatus.className = 'form-status is-success';
@@ -830,7 +947,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ---------- Live bug-bounty stats (Bugcrowd + CyberTalents) ---------- */
-  // Populates [data-live-stat="source.field"] elements from api/stats.php.
+  // Populates [data-live-stat="source.field"] elements from /api/stats.
   // Markup starts each stat on a "—" loading placeholder (see .stat-loading)
   // rather than a static number, so visitors never see an outdated figure —
   // only the pulsing placeholder or the real, live value. Once real numbers
@@ -846,7 +963,7 @@ document.addEventListener('DOMContentLoaded', () => {
       el.textContent = (el.dataset.livePrefix || '') + fallback + (el.dataset.liveSuffix || '');
     };
 
-    fetch('api/stats.php', { cache: 'no-store' })
+    fetch('/api/stats', { cache: 'no-store' })
       .then((res) => (res.ok ? res.json() : null))
       .then((data) => {
         liveStatEls.forEach((el) => {

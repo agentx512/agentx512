@@ -6,6 +6,22 @@
   const heroSection = canvas.closest('.hero');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // Probe context creation on a throwaway canvas first — THREE.WebGLRenderer
+  // logs its own console.error internally on failure instead of throwing, so
+  // a try/catch around it doesn't actually stop the fallback from being noisy.
+  function supportsWebGL() {
+    try {
+      const test = document.createElement('canvas');
+      return !!(window.WebGLRenderingContext && (test.getContext('webgl') || test.getContext('experimental-webgl')));
+    } catch (e) {
+      return false;
+    }
+  }
+  if (!supportsWebGL()) {
+    heroSection.classList.add('no-webgl');
+    return;
+  }
+
   let renderer;
   try {
     renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });

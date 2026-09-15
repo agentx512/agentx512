@@ -1,0 +1,3 @@
+# Disabled pages: kept in the repo, never deployed. vercel.json rewrites their
+# URLs to api/forbidden so visitors get a 403 instead of a 404.
+/services.html
