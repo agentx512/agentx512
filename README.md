@@ -1,44 +1,37 @@
-
-```md
 <div align="center">
 
 # Abdullah Mohamed Hussein
 
-### Software Engineer · Full-Stack Developer · Web Penetration Tester
+**Software Engineer · Full-Stack Developer · Web Penetration Tester**
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=3000&pause=900&color=58A6FF&center=true&vCenter=true&width=750&lines=Building+full-stack+web+applications;Breaking+web+applications+to+make+them+stronger;Web+Pentesting+%7C+Bug+Bounty+%7C+AppSec;Code.+Test.+Secure.+Repeat." alt="Typing SVG" />
-
-<br>
+Building reliable web systems, understanding how they fail, and making them harder to break.
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-agentx512.tech-0D1117?style=for-the-badge&logo=firefox&logoColor=FF7139)](https://agentx512.tech)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-agentx512-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/agentx512)
-[![Email](https://img.shields.io/badge/Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:abdullah.mo.contact@gmail.com)
+[![Medium](https://img.shields.io/badge/Medium-@agentx512-000000?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@agentx512)
+[![Instagram](https://img.shields.io/badge/Instagram-agentx512_-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/agentx512_)
+[![Facebook](https://img.shields.io/badge/Facebook-agentx512-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/agentx512)
+[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:abdullah.mo.contact@gmail.com)
 
-![Profile Views](https://komarev.com/ghpvc/?username=agentx512&label=Profile+Views&color=58A6FF&style=flat-square)
+![Profile Views](https://komarev.com/ghpvc/?username=agentx512&label=Profile%20Views&color=58A6FF&style=flat-square)
 
 </div>
 
 ---
 
-## ◇ Profile
+## About
 
-I build full-stack web applications with a strong interest in how systems work, fail, and can be secured.
+I work across **software engineering** and **cybersecurity**, with a focus on full-stack web development and offensive web security.
 
-My work sits between **Software Engineering** and **Cybersecurity**, with a focus on building practical web systems while continuously developing my skills in **Web Penetration Testing, Bug Bounty, Network Security, Digital Forensics, OSINT, and CTFs**.
-
-```text
-BUILD  →  TEST  →  BREAK  →  SECURE  →  IMPROVE
-```
-
-- Building Full-Stack Web Applications
-- Exploring Advanced Web Security & AppSec
-- Practicing Web Penetration Testing & Bug Bounty
-- Interested in security-focused software engineering
-- Open to Web Development & Cybersecurity collaboration
+- Building full-stack web applications
+- Practicing web penetration testing and bug bounty
+- Exploring advanced web security and application security
+- Interested in secure software engineering and practical system design
+- Open to collaboration on web development and cybersecurity projects
 
 ---
 
-# ⌘ Development Stack
+## Development Stack
 
 ### Languages
 
@@ -72,7 +65,7 @@ BUILD  →  TEST  →  BREAK  →  SECURE  →  IMPROVE
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
 ![Express.js](https://img.shields.io/badge/Express.js-21262D?style=flat-square&logo=express&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-21262D?style=flat-square&logo=flask&logoColor=white)
-![REST API](https://img.shields.io/badge/REST_APIs-005571?style=flat-square)
+![REST APIs](https://img.shields.io/badge/REST_APIs-005571?style=flat-square)
 ![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=flat-square&logo=graphql&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-21262D?style=flat-square&logo=jsonwebtokens&logoColor=white)
 ![WordPress](https://img.shields.io/badge/WordPress-21759B?style=flat-square&logo=wordpress&logoColor=white)
@@ -86,41 +79,9 @@ BUILD  →  TEST  →  BREAK  →  SECURE  →  IMPROVE
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-DD2C00?style=flat-square&logo=firebase&logoColor=white)
 
-### Scripting & Shells
-
-![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
-![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white)
-
-### Package Managers
-
-![NPM](https://img.shields.io/badge/NPM-CB3837?style=flat-square&logo=npm&logoColor=white)
-![Composer](https://img.shields.io/badge/Composer-885630?style=flat-square&logo=composer&logoColor=white)
-
-### Development & Deployment
-
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
-![Apache](https://img.shields.io/badge/Apache-D22128?style=flat-square&logo=apache&logoColor=white)
-![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
-![cPanel](https://img.shields.io/badge/cPanel-FF6C2C?style=flat-square&logo=cpanel&logoColor=white)
-
-### Automation
-
-![n8n](https://img.shields.io/badge/n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white)
-
-### Operating Systems
-
-![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C94?style=flat-square&logo=kalilinux&logoColor=white)
-![Windows](https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows11&logoColor=white)
-![Windows Server](https://img.shields.io/badge/Windows_Server-0078D4?style=flat-square&logo=windows&logoColor=white)
-![Tails](https://img.shields.io/badge/Tails-56347C?style=flat-square)
-
 ---
 
-# ⛨ Security Lab
+## Security Toolkit
 
 ### Recon & Attack Surface
 
@@ -151,13 +112,10 @@ BUILD  →  TEST  →  BREAK  →  SECURE  →  IMPROVE
 ![VPNs](https://img.shields.io/badge/VPNs-21262D?style=flat-square)
 ![VLANs](https://img.shields.io/badge/VLANs-21262D?style=flat-square)
 
-### Digital Forensics & Analysis
+### Digital Forensics & OSINT
 
 ![ExifTool](https://img.shields.io/badge/ExifTool-21262D?style=flat-square)
 ![CyberChef](https://img.shields.io/badge/CyberChef-21262D?style=flat-square)
-
-### OSINT
-
 ![Sherlock](https://img.shields.io/badge/Sherlock-21262D?style=flat-square)
 ![theHarvester](https://img.shields.io/badge/theHarvester-21262D?style=flat-square)
 ![Maltego](https://img.shields.io/badge/Maltego-21262D?style=flat-square)
@@ -167,14 +125,11 @@ BUILD  →  TEST  →  BREAK  →  SECURE  →  IMPROVE
 
 ![John the Ripper](https://img.shields.io/badge/John_the_Ripper-21262D?style=flat-square)
 ![Hashcat](https://img.shields.io/badge/Hashcat-21262D?style=flat-square)
-
-### Security & Privacy Utilities
-
 ![Tor](https://img.shields.io/badge/Tor-7D4698?style=flat-square&logo=torproject&logoColor=white)
 
 ### Platforms
 
-[![PortSwigger](https://img.shields.io/badge/PortSwigger_Web_Security_Academy-FF6633?style=flat-square&logo=burpsuite&logoColor=white)](https://portswigger.net/web-security)
+[![PortSwigger](https://img.shields.io/badge/PortSwigger_Web_Security_Academy-FF6633?style=flat-square&logo=portswigger&logoColor=white)](https://portswigger.net/web-security)
 [![Bugcrowd](https://img.shields.io/badge/Bugcrowd-F26822?style=flat-square&logo=bugcrowd&logoColor=white)](https://www.bugcrowd.com/)
 [![Hack The Box](https://img.shields.io/badge/Hack_The_Box-9FEF00?style=flat-square&logo=hackthebox&logoColor=111927)](https://www.hackthebox.com/)
 [![TryHackMe](https://img.shields.io/badge/TryHackMe-212C42?style=flat-square&logo=tryhackme&logoColor=white)](https://tryhackme.com/)
@@ -182,54 +137,61 @@ BUILD  →  TEST  →  BREAK  →  SECURE  →  IMPROVE
 
 ---
 
-# ◫ Documentation & Creative Tools
+## Environment & Workflow
 
-### Documentation
+### Development & Deployment
+
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
+![Apache](https://img.shields.io/badge/Apache-D22128?style=flat-square&logo=apache&logoColor=white)
+![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
+![cPanel](https://img.shields.io/badge/cPanel-FF6C2C?style=flat-square&logo=cpanel&logoColor=white)
+
+### Scripting, Packages & Automation
+
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
+![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white)
+![NPM](https://img.shields.io/badge/NPM-CB3837?style=flat-square&logo=npm&logoColor=white)
+![Composer](https://img.shields.io/badge/Composer-885630?style=flat-square&logo=composer&logoColor=white)
+![n8n](https://img.shields.io/badge/n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white)
+
+### Operating Systems
+
+![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C94?style=flat-square&logo=kalilinux&logoColor=white)
+![Windows](https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows11&logoColor=white)
+![Windows Server](https://img.shields.io/badge/Windows_Server-0078D4?style=flat-square&logo=windows&logoColor=white)
+![Tails](https://img.shields.io/badge/Tails-56347C?style=flat-square)
+
+### Documentation, Design & Productivity
 
 ![Markdown](https://img.shields.io/badge/Markdown-000000?style=flat-square&logo=markdown&logoColor=white)
 ![LaTeX](https://img.shields.io/badge/LaTeX-008080?style=flat-square&logo=latex&logoColor=white)
-
-### Design & Productivity
-
 ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white)
 ![Canva](https://img.shields.io/badge/Canva-00C4CC?style=flat-square&logo=canva&logoColor=white)
 ![Notion](https://img.shields.io/badge/Notion-000000?style=flat-square&logo=notion&logoColor=white)
 
 ---
 
-# ∿ GitHub Activity
-
-<p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=agentx512&show_icons=true&theme=github_dark&hide_border=true&bg_color=00000000&rank_icon=github" alt="GitHub Stats" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=agentx512&layout=compact&theme=github_dark&hide_border=true&bg_color=00000000" alt="Top Languages" />
-</p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=agentx512&theme=github-dark-blue&hide_border=true&background=00000000" alt="GitHub Streak" />
-</p>
-
-### Milestones
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=agentx512&theme=darkhub&no-frame=true&no-bg=true&margin-w=8&margin-h=8&row=1" alt="GitHub Trophies" />
-</p>
-
----
-
-# ↗ Connect
+## GitHub Activity
 
 <div align="center">
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-agentx512.tech-0D1117?style=for-the-badge&logo=firefox&logoColor=FF7139)](https://agentx512.tech)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-agentx512-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/agentx512)
-[![Medium](https://img.shields.io/badge/Medium-@agentx512-000000?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@agentx512)
-[![Instagram](https://img.shields.io/badge/Instagram-agentx512_-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/agentx512_)
-[![Facebook](https://img.shields.io/badge/Facebook-agentx512-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/agentx512)
-[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:abdullah.mo.contact@gmail.com)
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=agentx512&show_icons=true&theme=github_dark&hide_border=true&bg_color=00000000" alt="GitHub Stats" />
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=agentx512&layout=compact&theme=github_dark&hide_border=true&bg_color=00000000" alt="Top Languages" />
 
 <br>
 
-<sub>Build things. Understand them. Break them responsibly. Make them stronger.</sub>
+<img src="https://streak-stats.demolab.com?user=agentx512&theme=github-dark-blue&hide_border=true&background=00000000" alt="GitHub Streak" />
 
 </div>
-```
+
+---
+
+<div align="center">
+
+**Build carefully. Test deeply. Break responsibly. Improve continuously.**
+
+</div>
