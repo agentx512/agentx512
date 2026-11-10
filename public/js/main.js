@@ -499,8 +499,8 @@ document.addEventListener('DOMContentLoaded', () => {
       else window.location.href = '/#home';
     } else if (action === 'cv') {
       const a = document.createElement('a');
-      a.href = '/assets/Abdullah-Hussein-CV.pdf';
-      a.download = '';
+      a.href = '/assets/Abdullah-Hussein-CV.pdf?v=20261110';
+      a.download = 'Abdullah-Hussein-CV.pdf';
       document.body.appendChild(a);
       a.click();
       a.remove();
