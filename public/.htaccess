@@ -36,7 +36,7 @@ ErrorDocument 503 /503.html
   # Legacy header; explicitly disabled per current guidance (CSP is the real defense against XSS)
   Header always set X-XSS-Protection "0"
 
-  # HSTS — only takes effect once served over HTTPS with a real certificate;
+  # HSTS - only takes effect once served over HTTPS with a real certificate;
   # harmless no-op over plain HTTP today, pre-staged for when the site moves to a TLS-terminated domain.
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 
@@ -44,7 +44,7 @@ ErrorDocument 503 /503.html
   # origins this site actually loads (Google Fonts, jsDelivr for Three.js/GSAP).
   # 'unsafe-inline' is required for script-src/style-src because the site has no
   # build step to generate per-request nonces for its inline theme-detection
-  # script and inline style attributes — this still blocks any externally
+  # script and inline style attributes - this still blocks any externally
   # injected <script src> or stylesheet from a non-allow-listed origin.
   Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
 </IfModule>

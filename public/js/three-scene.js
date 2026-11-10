@@ -1,4 +1,4 @@
-/* Hero 3D background — wireframe icosahedron + particle field, mouse parallax */
+/* Hero 3D background - wireframe icosahedron + particle field, mouse parallax */
 (function () {
   const canvas = document.getElementById('hero-canvas');
   if (!canvas || typeof THREE === 'undefined') return;
@@ -6,7 +6,7 @@
   const heroSection = canvas.closest('.hero');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Probe context creation on a throwaway canvas first — THREE.WebGLRenderer
+  // Probe context creation on a throwaway canvas first - THREE.WebGLRenderer
   // logs its own console.error internally on failure instead of throwing, so
   // a try/catch around it doesn't actually stop the fallback from being noisy.
   function supportsWebGL() {
@@ -117,7 +117,7 @@
   const clock = new THREE.Clock();
 
   // Only burn GPU/CPU while the hero is actually on screen and the tab is
-  // visible — otherwise this loop would render forever in the background,
+  // visible - otherwise this loop would render forever in the background,
   // even while scrolled deep into other sections or in a backgrounded tab.
   let rafId = null;
   let heroVisible = true;

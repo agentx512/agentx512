@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- Correct #hash landing position once everything has settled ----------
      The browser jumps to a URL's #fragment very early (as soon as the target
      exists), before images/fonts finish loading and before the preloader's own
-     layout settles — on a page landed on from another page (e.g. experience.html
+     layout settles - on a page landed on from another page (e.g. experience.html
      -> index.html#work) that first jump can end up short or long once the page's
      real height is final. scroll-margin-top (see style.css) fixes the "stuck
      under the fixed navbar" part; this re-asserts the final position once the
@@ -53,6 +53,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const preloaderBar = document.querySelector('.preloader-bar span');
   const preloaderPercent = document.querySelector('.preloader-percent');
 
+  // Resolves once the preloader is out of the way (straight away on a page
+  // without one). Entrance animations wait for it so none of them play
+  // unseen behind the boot screen.
+  let markPageRevealed;
+  const pageRevealed = new Promise((resolve) => { markPageRevealed = resolve; });
+  if (!preloader) markPageRevealed();
+
   if (preloader) {
     let rainRAF = null;
 
@@ -72,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
       sizeRain();
       window.addEventListener('resize', sizeRain);
       const chars = '01アイウエオカキクケコサシスセソ$#%&';
-      // Read the theme-aware preloader tokens once — they don't change mid-boot.
+      // Read the theme-aware preloader tokens once - they don't change mid-boot.
       const rootStyle = getComputedStyle(document.documentElement);
       const bgRgb = (rootStyle.getPropertyValue('--pl-bg-rgb') || '6, 9, 7').trim();
       const accentHex = (rootStyle.getPropertyValue('--pl-accent') || '#39ff88').trim();
@@ -153,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
           const custom = JSON.parse(preloader.dataset.bootLines);
           if (Array.isArray(custom) && custom.length) lines = custom;
-        } catch (e) { /* malformed — keep default lines */ }
+        } catch (e) { /* malformed - keep default lines */ }
       }
       const finalMsg = preloader.dataset.bootFinal || 'access granted';
       for (const line of lines) {
@@ -206,8 +213,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (rainRAF) cancelAnimationFrame(rainRAF);
       if (reducedMotion) {
         preloader.classList.add('is-hidden');
+        markPageRevealed();
       } else {
         preloader.classList.add('is-exiting');
+        // crtOff has collapsed the terminal to a thin line ~55% into its 520ms.
+        setTimeout(markPageRevealed, 290);
         setTimeout(() => preloader.classList.add('is-hidden'), 560);
       }
     }
@@ -275,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Back/forward navigation can restore this page from the bfcache exactly as
-  // it was when we left — mid-transition, with the overlay still active (no
+  // it was when we left - mid-transition, with the overlay still active (no
   // DOMContentLoaded fires on a bfcache restore, so nothing else would clear it).
   window.addEventListener('pageshow', (e) => {
     if (e.persisted) pageTransition.classList.remove('is-active');
@@ -283,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- Custom context menu + devtools deterrent ----------
      Note: this only deters casual right-click / shortcut access. It cannot
-     stop a determined visitor — browsers always let users view any page's
+     stop a determined visitor - browsers always let users view any page's
      HTML/CSS/JS by design (dev tools via the browser's own menu, curl, etc). */
   const ICON_LINK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1.5 1.5"/><path d="M15 12a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1.5-1.5"/></svg>';
   const ICON_HOME = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5"/></svg>';
@@ -309,12 +319,12 @@ document.addEventListener('DOMContentLoaded', () => {
       '<a class="ctx-item" href="https://github.com/agentx512" target="_blank" rel="noopener" role="menuitem">' + ICON_EXTERNAL + '<span>GitHub</span></a>' +
       '<button class="ctx-item" data-action="contact" role="menuitem">' + ICON_MAIL + '<span>Contact</span></button>' +
       '<div class="ctx-sep"></div>' +
-      '<div class="ctx-item is-disabled" aria-disabled="true">' + ICON_LOCK + '<span>Inspect — restricted</span></div>'
+      '<div class="ctx-item is-disabled" aria-disabled="true">' + ICON_LOCK + '<span>Inspect - restricted</span></div>'
     );
   }
 
   // Editable fields (the contact form) get real Cut/Copy/Paste/Select All instead
-  // of the branded menu — a right-click in a text field is a request for text
+  // of the branded menu - a right-click in a text field is a request for text
   // actions, not a link to GitHub.
   function fieldMenuHTML(field) {
     const hasSelection = field.selectionStart !== field.selectionEnd;
@@ -345,7 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function openCtxMenuAt(x, y) {
     ctxMenu.classList.add('is-open');
     // offsetWidth/Height reflect layout size, unaffected by the CSS
-    // transform still mid-transition — unlike getBoundingClientRect(),
+    // transform still mid-transition - unlike getBoundingClientRect(),
     // which would under-measure at scale(0.95) the instant the class lands.
     const w = ctxMenu.offsetWidth, h = ctxMenu.offsetHeight;
     const vw = window.innerWidth, vh = window.innerHeight;
@@ -388,7 +398,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', closeCtxMenu);
 
   // Writes text to the clipboard, Clipboard API first (needs a secure/HTTPS
-  // origin), falling back to a hidden-textarea execCommand('copy') — the
+  // origin), falling back to a hidden-textarea execCommand('copy') - the
   // Clipboard API is unavailable outright on this plain-HTTP .local vhost, so
   // every copy currently rides the fallback until the site moves to HTTPS.
   function copyText(text) {
@@ -412,7 +422,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // execCommand('copy'/'cut') on a focused field's own selection works even
-  // without the Clipboard API/HTTPS — it's the older, still-functional path
+  // without the Clipboard API/HTTPS - it's the older, still-functional path
   // for editable-element selections specifically.
   function fieldCommand(cmd) {
     if (!ctxFieldEl || !ctxFieldRange) return false;
@@ -463,7 +473,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const field = ctxFieldEl;
       const range = ctxFieldRange;
       if (!field || !range || !navigator.clipboard || !navigator.clipboard.readText) {
-        // Clipboard read needs a secure (HTTPS) origin — unavailable on this
+        // Clipboard read needs a secure (HTTPS) origin - unavailable on this
         // plain-HTTP .local vhost today. Native Ctrl+V still works fine.
         flashItem(item, false, '', 'Use Ctrl+V');
         return;
@@ -529,6 +539,19 @@ document.addEventListener('DOMContentLoaded', () => {
       el.addEventListener('mouseenter', () => outline && outline.classList.add('is-active'));
       el.addEventListener('mouseleave', () => outline && outline.classList.remove('is-active'));
     });
+
+    // Text controls need the native I-beam for an accurate insertion point.
+    // Hide the decorative cursor while the pointer is over an editable field.
+    document.querySelectorAll('input, textarea, [contenteditable="true"]').forEach((el) => {
+      el.addEventListener('mouseenter', () => {
+        dot && dot.classList.add('is-hidden');
+        outline && outline.classList.add('is-hidden');
+      });
+      el.addEventListener('mouseleave', () => {
+        dot && dot.classList.remove('is-hidden');
+        outline && outline.classList.remove('is-hidden');
+      });
+    });
   } else {
     document.body.classList.add('no-custom-cursor');
   }
@@ -559,7 +582,7 @@ document.addEventListener('DOMContentLoaded', () => {
           navLinks.forEach((link) => {
             const href = link.getAttribute('href');
             // Cross-page links (certifications.html, services.html, ...) aren't part of
-            // this page's scroll-spy — leave whatever active state the page already set.
+            // this page's scroll-spy - leave whatever active state the page already set.
             if (href.charAt(0) !== '#') return;
             link.classList.toggle('is-active', href === `#${entry.target.id}`);
           });
@@ -584,9 +607,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactForm = document.getElementById('contact-form');
   const formStatus = document.getElementById('form-status');
 
-  // Device context sent along with each message (disclosed under the form).
+  // Device context sent along with each message. There's no notice about it
+  // under the form (removed at the site owner's request in 007406e).
   // All of it is self-reported by the browser, so /api/contact treats it as
-  // hints only — the IP, location and User-Agent it records come from the
+  // hints only - the IP, location and User-Agent it records come from the
   // request itself.
   let formStartedAt = 0;
   contactForm && contactForm.addEventListener('input', () => {
@@ -700,7 +724,7 @@ document.addEventListener('DOMContentLoaded', () => {
       try {
         payload.meta = await collectClientMeta();
       } catch (err) {
-        // Device details are optional — the message still goes out without them.
+        // Device details are optional - the message still goes out without them.
       }
 
       const res = await fetch('/api/contact', {
@@ -714,7 +738,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const data = await res.json().catch(() => ({}));
       if (res.ok && data.ok) {
-        formStatus.textContent = "Message sent — thanks! I'll get back to you soon.";
+        formStatus.textContent = "Message sent - thanks! I'll get back to you soon.";
         formStatus.className = 'form-status is-success';
         contactForm.reset();
       } else {
@@ -722,7 +746,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formStatus.className = 'form-status is-error';
       }
     } catch (err) {
-      formStatus.textContent = 'Network error — please email me directly instead.';
+      formStatus.textContent = 'Network error - please email me directly instead.';
       formStatus.className = 'form-status is-error';
     } finally {
       submitBtn.disabled = false;
@@ -733,60 +757,68 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.gsap && window.ScrollTrigger) {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Hero intro
-    const heroTl = gsap.timeline({ delay: 0.4 });
-    heroTl
-      .from('.hero .eyebrow', { opacity: 0, y: 20, duration: 0.6, ease: 'power3.out' })
-      .from('.hero-name', { opacity: 0, y: 40, duration: 0.8, ease: 'power3.out' }, '-=0.35')
-      .from('.hero-tagline', { opacity: 0, y: 20, duration: 0.6, ease: 'power3.out' }, '-=0.45')
-      .from('.hero-actions', { opacity: 0, y: 20, duration: 0.6, ease: 'power3.out' }, '-=0.45')
-      .from('.hero .social-row', { opacity: 0, y: 20, duration: 0.6, ease: 'power3.out' }, '-=0.45')
-      .from('.hero-photo-wrap', { opacity: 0, scale: 0.85, duration: 0.8, ease: 'power3.out' }, '-=0.6')
-      .from('.scroll-cue', { opacity: 0, duration: 0.6 }, '-=0.3');
+    // Counters carry their final value in the markup (so visitors without
+    // JavaScript see real numbers) - zero them here so they can count up.
+    const counters = document.querySelectorAll('[data-count]');
+    counters.forEach((el) => { el.textContent = '0'; });
 
-    // Generic reveal on scroll for anything with .reveal
-    document.querySelectorAll('.reveal').forEach((el, i) => {
-      gsap.to(el, {
-        opacity: 1,
-        y: 0,
-        duration: 0.9,
-        ease: 'power3.out',
-        scrollTrigger: {
+    pageRevealed.then(() => {
+      // Hero intro
+      if (!reducedMotion) {
+        gsap.timeline()
+          .from('.hero .eyebrow', { opacity: 0, y: 20, duration: 0.6, ease: 'power3.out' })
+          .from('.hero-name', { opacity: 0, y: 40, duration: 0.8, ease: 'power3.out' }, '-=0.35')
+          .from('.hero-tagline', { opacity: 0, y: 20, duration: 0.6, ease: 'power3.out' }, '-=0.45')
+          .from('.hero-actions', { opacity: 0, y: 20, duration: 0.6, ease: 'power3.out' }, '-=0.45')
+          .from('.hero .social-row', { opacity: 0, y: 20, duration: 0.6, ease: 'power3.out' }, '-=0.45')
+          .from('.hero-photo-wrap', { opacity: 0, scale: 0.85, duration: 0.8, ease: 'power3.out' }, '-=0.6')
+          .from('.scroll-cue', { opacity: 0, duration: 0.6 }, '-=0.3');
+      }
+
+      // Generic reveal on scroll for anything with .reveal
+      document.querySelectorAll('.reveal').forEach((el, i) => {
+        gsap.to(el, {
+          opacity: 1,
+          y: 0,
+          duration: 0.9,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse',
+          },
+          delay: (i % 4) * 0.06,
+        });
+      });
+
+      // Skill bars fill on scroll
+      document.querySelectorAll('.skill-bar span[data-width]').forEach((bar) => {
+        ScrollTrigger.create({
+          trigger: bar,
+          start: 'top 90%',
+          once: true,
+          onEnter: () => { bar.style.width = bar.dataset.width + '%'; },
+        });
+      });
+
+      // Stat numbers count up on scroll
+      counters.forEach((el) => {
+        const target = parseInt(el.dataset.count, 10) || 0;
+        const suffix = el.dataset.suffix || '';
+        const counter = { val: 0 };
+        ScrollTrigger.create({
           trigger: el,
-          start: 'top 85%',
-          toggleActions: 'play none none reverse',
-        },
-        delay: (i % 4) * 0.06,
-      });
-    });
-
-    // Skill bars fill on scroll
-    document.querySelectorAll('.skill-bar span[data-width]').forEach((bar) => {
-      ScrollTrigger.create({
-        trigger: bar,
-        start: 'top 90%',
-        once: true,
-        onEnter: () => { bar.style.width = bar.dataset.width + '%'; },
-      });
-    });
-
-    // Stat numbers count up on scroll
-    document.querySelectorAll('[data-count]').forEach((el) => {
-      const target = parseInt(el.dataset.count, 10) || 0;
-      const suffix = el.dataset.suffix || '';
-      const counter = { val: 0 };
-      ScrollTrigger.create({
-        trigger: el,
-        start: 'top 90%',
-        once: true,
-        onEnter: () => {
-          gsap.to(counter, {
-            val: target,
-            duration: 1.6,
-            ease: 'power2.out',
-            onUpdate: () => { el.textContent = Math.round(counter.val) + suffix; },
-          });
-        },
+          start: 'top 90%',
+          once: true,
+          onEnter: () => {
+            gsap.to(counter, {
+              val: target,
+              duration: 1.6,
+              ease: 'power2.out',
+              onUpdate: () => { el.textContent = Math.round(counter.val) + suffix; },
+            });
+          },
+        });
       });
     });
 
@@ -948,8 +980,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- Live bug-bounty stats (Bugcrowd + CyberTalents) ---------- */
   // Populates [data-live-stat="source.field"] elements from /api/stats.
-  // Markup starts each stat on a "—" loading placeholder (see .stat-loading)
-  // rather than a static number, so visitors never see an outdated figure —
+  // Markup starts each stat on a "-" loading placeholder (see .stat-loading)
+  // rather than a static number, so visitors never see an outdated figure -
   // only the pulsing placeholder or the real, live value. Once real numbers
   // arrive, they count up from zero as the stat scrolls into view
   // (immediately if it's already visible). data-fallback is the last-known-
@@ -984,7 +1016,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
           if (window.gsap && window.ScrollTrigger) {
             const counter = { val: 0 };
-            ScrollTrigger.create({
+            pageRevealed.then(() => ScrollTrigger.create({
               trigger: el,
               start: 'top 90%',
               once: true,
@@ -997,7 +1029,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   onUpdate: () => render(counter.val),
                 });
               },
-            });
+            }));
           } else {
             el.classList.remove('stat-loading');
             render(target);

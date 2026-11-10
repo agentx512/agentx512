@@ -1,5 +1,5 @@
 /* =========================================================
-   Portfolio — Dark Glass + 3D theme
+   Portfolio - Dark Glass + 3D theme
    Structure: Tokens → Base → Layout → Components → Sections → Responsive
    ========================================================= */
 
@@ -13,12 +13,12 @@
   --text: #eafbf1;
   --text-dim: #93b5a3;
   --text-faint: #6f8f7d;
-  /* Theme-aware: used for text/icons directly on page bg — kept dark-mode-vivid here,
+  /* Theme-aware: used for text/icons directly on page bg - kept dark-mode-vivid here,
      darkened in the light override below so contrast against a light bg still holds. */
   --accent: #39ff88;
   --accent-2: #22e8c4;
   --accent-3: #7c9cff;
-  /* Fixed vivid pair for gradients that sit behind fixed dark text (buttons) —
+  /* Fixed vivid pair for gradients that sit behind fixed dark text (buttons) -
      must NOT darken in light mode or button text loses contrast. */
   --accent-btn-1: #0ea25e;
   --accent-btn-2: #39ff88;
@@ -41,7 +41,7 @@
   --shadow-glow: 0 0 80px rgba(57, 255, 136, 0.14);
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --maxw: 1180px;
-  /* Terminal preloader (theme-aware — see light override below) */
+  /* Terminal preloader (theme-aware - see light override below) */
   --pl-bg: #0e1512;
   --pl-bg-rgb: 14, 21, 18;
   --pl-accent: #39ff88;
@@ -75,7 +75,7 @@
   --danger: #b91c1c;
   --warning: #92600a;
   --warning-bg: rgba(146, 96, 10, 0.14);
-  /* Terminal preloader — light equivalent */
+  /* Terminal preloader - light equivalent */
   --pl-bg: #eef5f0;
   --pl-bg-rgb: 238, 245, 240;
   --pl-accent: #0a7a43;
@@ -200,6 +200,7 @@ section { position: relative; padding: 160px 0; }
   transition: width .2s var(--ease), height .2s var(--ease), border-color .2s;
 }
 .cursor-outline.is-active { width: 60px; height: 60px; border-color: var(--accent-2); }
+.cursor-dot.is-hidden, .cursor-outline.is-hidden { opacity: 0; }
 
 @media (hover: none), (pointer: coarse) {
   .cursor-dot, .cursor-outline { display: none; }
@@ -622,6 +623,12 @@ section { position: relative; padding: 160px 0; }
   color: var(--text-dim);
   font-size: 1.05rem; margin-bottom: 36px;
 }
+.hero-tagline a, .tl-company a, .position-card p a {
+  color: var(--accent); font-weight: 600;
+  text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+.hero-tagline a:hover, .tl-company a:hover, .position-card p a:hover { color: var(--accent-2); }
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
 
 .social-row { display: flex; gap: 14px; flex-wrap: wrap; }
@@ -635,7 +642,7 @@ section { position: relative; padding: 160px 0; }
 .social-btn svg { width: 18px; height: 18px; }
 .social-btn:hover { color: var(--accent-2); border-color: var(--accent-2); transform: translateY(-2px); }
 
-/* Hero photo — HUD scan-frame (corner brackets + sweep line + edge tags) */
+/* Hero photo - HUD scan-frame (corner brackets + sweep line + edge tags) */
 .hero-photo-wrap { position: relative; width: 280px; height: 280px; margin: 0 auto; }
 .hero-photo-glow {
   position: absolute; inset: -30px; border-radius: 50%;
@@ -1028,7 +1035,7 @@ section { position: relative; padding: 160px 0; }
 }
 
 /* Alternating zig-zag timeline (desktop) / left-rail list (mobile).
-   Dot and card are pinned to grid-row 1 — otherwise, in rows where the card comes first in the
+   Dot and card are pinned to grid-row 1 - otherwise, in rows where the card comes first in the
    markup, auto-placement drops the dot onto a second row under the card in the mobile layout. */
 .timeline-v2 { position: relative; max-width: 900px; margin: 0 auto; }
 .timeline-v2::before {
@@ -1174,14 +1181,27 @@ section { position: relative; padding: 160px 0; }
 .form-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 18px; }
 .form-field label { font-size: 12.5px; color: var(--text-dim); }
 .form-field input, .form-field textarea {
+  width: 100%; min-width: 0;
   background: var(--surface); border: 1px solid var(--border-strong);
   border-radius: var(--radius-sm); padding: 12px 14px;
   color: var(--text); font-family: inherit; font-size: 0.9rem;
   transition: border-color .25s;
   resize: vertical;
+  cursor: text;
 }
-.form-field input:focus, .form-field textarea:focus { outline: none; border-color: var(--accent-2); }
+.form-field input:focus, .form-field textarea:focus {
+  outline: none;
+  border-color: var(--accent-2);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-2) 14%, transparent);
+}
 .form-field input::placeholder, .form-field textarea::placeholder { color: var(--text-faint); }
+.form-field input:-webkit-autofill,
+.form-field input:-webkit-autofill:hover,
+.form-field input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--text);
+  caret-color: var(--text);
+  transition: background-color 9999s ease-out 0s;
+}
 .hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .form-submit { width: 100%; justify-content: center; }
 .form-submit:disabled { opacity: 0.6; pointer-events: none; }
@@ -1330,6 +1350,7 @@ body.err-503 .error-section { --err-c1: var(--warning); --err-c2: var(--danger);
 .position-card { padding: 22px 24px; border-left: 3px solid var(--accent); }
 .position-card.b-cyan { border-left-color: var(--accent-2); }
 .position-card.b-pink { border-left-color: var(--accent-3); }
+.position-card.is-featured { grid-column: 1 / -1; }
 .position-card-inner { display: flex; align-items: flex-start; gap: 14px; }
 .position-card h3 { font-size: 1rem; margin-bottom: 3px; }
 .position-card p { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 3px; }
@@ -1875,7 +1896,7 @@ body.lb-open { overflow: hidden; }
   position: absolute;
   border-radius: 50%;
   background: var(--text-faint);
-  /* Opacity-only twinkle — a transform: scale() on a sub-2px circle forces the
+  /* Opacity-only twinkle - a transform: scale() on a sub-2px circle forces the
      browser to rasterize then rescale it every frame, which reads as pixelation/blur. */
   animation: starTwinkle ease-in-out infinite;
 }

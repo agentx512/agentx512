@@ -10,7 +10,7 @@ import { join } from 'node:path';
  * this those URLs would fall through to the 404 page instead.
  */
 
-const FALLBACK_PAGE = '<!doctype html><meta charset="utf-8"><title>403 — Access Denied</title><h1>403 — Access Denied</h1>';
+const FALLBACK_PAGE = '<!doctype html><meta charset="utf-8"><title>403 - Access Denied</title><h1>403 - Access Denied</h1>';
 
 // 403.html is bundled with this function via "includeFiles" in vercel.json, but
 // where it lands inside the bundle depends on how Vercel lays out a project with
@@ -32,7 +32,7 @@ async function forbiddenPage(req) {
       cachedPage = readFileSync(file, 'utf8');
       return cachedPage;
     } catch (err) {
-      // Not at this path — try the next one.
+      // Not at this path - try the next one.
     }
   }
 

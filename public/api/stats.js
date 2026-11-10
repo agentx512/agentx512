@@ -4,13 +4,13 @@
  *
  * Pulls public, unauthenticated JSON from Bugcrowd's profile-service API and
  * scrapes CyberTalents' server-side DataTables leaderboard for Egypt rank
- * (world rank + points come straight from the profile page widget instead —
+ * (world rank + points come straight from the profile page widget instead -
  * see parseCybertalentsAndSearch() for why). All four independent GETs run
- * concurrently instead of one after another — CyberTalents alone is a slow,
+ * concurrently instead of one after another - CyberTalents alone is a slow,
  * uncached, server-rendered DataTables backend (multi-second per request),
  * so running things in parallel is what keeps total latency reasonable.
  *
- * No caching — every request hits Bugcrowd/CyberTalents fresh. Traffic is low
+ * No caching - every request hits Bugcrowd/CyberTalents fresh. Traffic is low
  * enough that this is fine, and it means numbers are never stale.
  */
 
@@ -35,7 +35,7 @@ async function fetchWithTimeout(url, options = {}, timeoutMs = 9000) {
   }
 }
 
-// Node's fetch has no cookie jar (unlike curl's CURLOPT_COOKIEJAR) — pull the
+// Node's fetch has no cookie jar (unlike curl's CURLOPT_COOKIEJAR) - pull the
 // Set-Cookie values off the /worldrank GET so they can be replayed manually
 // on the DataTables POST that needs that same session.
 function cookieHeaderFrom(res) {
@@ -71,7 +71,7 @@ function parseBugcrowd(perf, badgesData) {
   return Object.keys(out).length ? out : null;
 }
 
-// Capped pagination — real rank was found on page 1 in testing; this just
+// Capped pagination - real rank was found on page 1 in testing; this just
 // gives headroom if it ever climbs past 500 within a country/world list.
 async function ctFindRank(cookie, csrf, countryCode, username) {
   const columns = ['DT_RowIndex', 'user.username', 'points', 'country', 'won_at'];
@@ -122,7 +122,7 @@ async function ctFindRank(cookie, csrf, countryCode, username) {
 }
 
 /**
- * Parses the CyberTalents profile page (world rank + points — the exact
+ * Parses the CyberTalents profile page (world rank + points - the exact
  * numbers the profile itself displays) and the /worldrank page (CSRF token +
  * primed session cookie, both already fetched in the concurrent batch), then
  * issues the one remaining request that has to happen after: the
